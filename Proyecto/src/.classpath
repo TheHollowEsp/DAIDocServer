@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="test_bin" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/fluent-hc-4.3.5.jar" sourcepath="lib_files/httpcomponents-client-4.3.5.zip"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.3.5.jar" sourcepath="lib_files/httpcomponents-client-4.3.5.zip"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.3.2.jar" sourcepath="lib_files/httpcomponents-core-4.3.2-src.zip"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.3.jar" sourcepath="lib_files/commons-logging-1.1.3-src.zip"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.4.9.jar" sourcepath="lib_files/dbunit-2.4.9-sources.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.7.jar" sourcepath="lib_files/slf4j-simple-1.7.7-sources.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.7.jar" sourcepath="lib_files/slf4j-api-1.7.7-sources.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="lib/derby.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-all-1.3.jar" sourcepath="lib_files/hamcrest-all-1.3-sources.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.11.jar" sourcepath="lib_files/junit-4.11-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
