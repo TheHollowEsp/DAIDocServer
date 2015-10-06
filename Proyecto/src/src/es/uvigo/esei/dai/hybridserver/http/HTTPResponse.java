@@ -55,7 +55,7 @@ public class HTTPResponse {
 	public Map<String, String> getParameters() {
 		return parameters;
 	}
-
+	
 	public String putParameter(String name, String value) {
 		parameters.put(name,value);
 		return name;
