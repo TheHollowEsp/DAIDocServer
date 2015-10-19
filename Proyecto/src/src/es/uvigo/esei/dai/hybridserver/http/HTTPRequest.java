@@ -20,7 +20,7 @@ import java.io.Reader;
 import java.net.URLDecoder;
 import java.util.LinkedHashMap;
 import java.util.Map;
-@SuppressWarnings("unused")
+
 public class HTTPRequest {
 	private String httpVersion;	
 	public HTTPRequestMethod method;// 1 Metodo	
