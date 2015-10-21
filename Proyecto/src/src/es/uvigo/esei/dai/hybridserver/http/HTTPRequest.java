@@ -97,17 +97,17 @@ public class HTTPRequest {
 			if (codificado == true) {
 				content = URLDecoder.decode(content, "UTF-8");
 			}			
-			if (content.contains("&")) {
-				String[] p = content.split("&");
-				for (int j = 0; j < p.length; j++) {
-					String[] aux3 = p[j].split("=");
-					ResourceParameters.put(aux3[0], aux3[1]);
+			if (content.contains("&")) { 						// Si tiene varios parametros
+				String[] p = content.split("&"); 				// Separamos por parametro
+				for (int j = 0; j < p.length; j++) { 			// Y guardamos cada uno
+					String[] aux3 = p[j].split("="); 			// Separando clave y valor
+					ResourceParameters.put(aux3[0], aux3[1]);	
 				}
-			} else {
-				String[] param = content.split("=");
+			} else {											// Si no tiene mas que uno
+				String[] param = content.split("=");			// Guardamos
 				ResourceParameters.put(param[0], param[1]);
 			}
-			contentEntero = content;
+			contentEntero = content;							
 			x = content.split("=");
 			content = x[1];
 			completo = x[0].concat(x[1]);

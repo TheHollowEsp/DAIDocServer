@@ -56,13 +56,14 @@ public class HybridServer {
 			public void run() {
 				System.out.println("Hilo servidor iniciado");
 				try (final ServerSocket serverSocket = new ServerSocket(SERVICE_PORT)) {
-					// ExecutorService threadPool =
-					// Executors.newFixedThreadPool(numClientes);
+					// ExecutorService threadPool = Executors.newFixedThreadPool(numClientes);
 					while (true) {
 						try (Socket socket = serverSocket.accept()) {
 							System.out.println("Peticion aceptada");
 							if (stop)
 								break;
+							// TODO: Hacer un nuevo hilo de servicio para meter la logica
+							/* Meter en un hilo desde aqui */
 							if (modo == 1) {
 								// Responder al cliente
 								HTTPResponse resp = new HTTPResponse();
@@ -99,7 +100,8 @@ public class HybridServer {
 									// Mostramos todos los uuid posibles como link
 									for(String currentKey : pages.keySet()){
 										
-										content += "<a href=\"127.0.0.1/html?uuid='"+currentKey+"'\"></a>";
+										content += "<a href=\"http://127.0.0.1/html?uuid="+currentKey+"\">"+currentKey+"</a>";
+										content += "\n";
 									}
 									content += "</body></html>";
 									OutputStream output = socket.getOutputStream();
@@ -132,6 +134,7 @@ public class HybridServer {
 
 								}
 							}
+							/* Meter en un hilo hasta aqui */
 						}
 					}
 				} catch (IOException e) {
