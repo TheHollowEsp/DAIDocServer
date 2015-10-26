@@ -1,54 +1,45 @@
-<html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1"  />
 </head>
 <body>
-<h2>Configuración de Eclipse</h2>
-<p>El proyecto HybridServer que se ofrece como base del desarrollo está 
-configurado para utilizar la codificación de caracteres UTF-8 y el salto
- de línea propio de Unix en el código fuente. Por lo tanto, antes de 
-empezar a programar se debe comprobar que estos parámetros son correctos
- tras la importación.</p>
-<p>Para ello, con el proyecto abierto y seleccionado en Eclipse, debe 
-irse a Project-&gt;Properties. Una vez se abra el diálogo de 
-propiedades, debe irse al panel Resource, donde hay que comprobar que 
-están seleccionados los siguientes valores:</p>
+<h2>Configuraci&oacute;n de Eclipse</h2>
+<p>El proyecto HybridServer que se ofrece como base del desarrollo est&aacute; configurado para utilizar la codificaci&oacute;n de caracteres UTF-8 y el salto de l&iacute;nea propio de Unix en el c&oacute;digo fuente. Por lo tanto, antes de empezar a programar se debe comprobar que estos par&aacute;metros son correctos tras la importaci&oacute;n.</p>
+<p>Para ello, con el proyecto abierto y seleccionado en Eclipse, debe irse a Project-&gt;Properties. Una vez se abra el di&aacute;logo de propiedades, debe irse al panel Resource, donde hay que comprobar que est&aacute;n seleccionados los siguientes valores:</p>
 <ul>
 <li>Text file encoding: UTF-8</li>
 <li>New text file line delimiter: Unix</li>
 </ul>
-<h2>Simplificación del Protocolo HTTP</h2>
-<p>No es necesario que el servidor implemente el protocolo HTTP, tan 
-solo será necesario cumplir con un pequeño conjunto de sus 
-funcionalidades. Algunas de las simplificaciones más importantes que 
-aplicaremos son que:</p>
+<h2>Simplificaci&oacute;n del Protocolo HTTP</h2>
+<p>No es necesario que el servidor implemente el protocolo HTTP, tan solo ser&aacute; necesario cumplir con un peque&ntilde;o conjunto de sus funcionalidades. Algunas de las simplificaciones m&aacute;s importantes que aplicaremos son que:</p>
 <ul>
-<li>Siempre utilizaremos la codificación de caracteres UTF-8.</li>
-<li>No es necesario dar soporte al esquema de conexión "keep-alive". Las
- conexiones siempre se cierran tras manejar una única petición (p.ej. 
-servir una página, eliminar una página, etc.).</li>
+<li>Siempre utilizaremos la codificaci&oacute;n de caracteres UTF-8.</li>
+<li>No es necesario dar soporte al esquema de conexi&oacute;n "keep-alive". Las conexiones siempre se cierran tras manejar una &uacute;nica petici&oacute;n (p.ej. servir una p&aacute;gina, eliminar una p&aacute;gina, etc.).</li>
 <li>Salvo algunas cabeceras importantes, como Content-type y Content-length, no es necesario tenerlas en cuenta.</li>
 <li>No es necesario dar soporte a Cookies.</li>
 </ul>
 <h2>Contenido URL-Encoded</h2>
-<p>Es habitual que los navegadores envíen el contenido de los 
-formularios condificados en formato URL (URL encoded). Cuando esto 
-ocurre, la petición HTTP contendrá la cabecera 
-"Content-type:&nbsp;application/x-www-form-urlencoded". En dichos casos,
- el contenido deberá ser decodificado. Para ello se puede utilizar la 
-clase&nbsp;java.net.URLDecoder de la siguiente forma:</p>
+<p>Es habitual que los navegadores env&iacute;en el contenido de los formularios condificados en formato URL (URL encoded). Cuando esto ocurre, la petici&oacute;n HTTP contendr&aacute; la cabecera "Content-type:&nbsp;application/x-www-form-urlencoded". En dichos casos, el contenido deber&aacute; ser decodificado. Para ello se puede utilizar la clase&nbsp;java.net.URLDecoder de la siguiente forma:</p>
 <p><span style="font-family: 'courier new', courier;">java.net.URLDecoder.decode(contenido, "UTF-8")</span></p>
-<p>De este modo, después de guardar el contenido de una petición HTTP 
-(clase HTTPRequest), deberemos hacer algo de este estilo para que se 
-almacene de forma correcta:</p>
-<p><span style="font-family: 'courier new', courier;">String type =&nbsp;headerParams.get("Content-type");</span><br><span style="font-family: 'courier new', courier;">if (type != null &amp;&amp; type.startsWith("application/x-www-form-urlencoded")) {<br>&nbsp; &nbsp;content = URLDecoder.decode(content, "UTF-8");<br>}</span></p>
+<p>De este modo, despu&eacute;s de guardar el contenido de una petici&oacute;n HTTP (clase HTTPRequest), deberemos hacer algo de este estilo para que se almacene de forma correcta:</p>
+<p><span style="font-family: 'courier new', courier;">String type =&nbsp;headerParams.get("Content-type");</span><br /><span style="font-family: 'courier new', courier;">if (type != null &amp;&amp; type.startsWith("application/x-www-form-urlencoded")) {<br />&nbsp; &nbsp;content = URLDecoder.decode(content, "UTF-8");<br />}</span></p>
+<h2>Problemas con HTTPRequest.toString()</h2>
+<p>En el caso de que los tests que utilicen el m&eacute;todo HTTPRequest.toString() fallen, es muy probable que se deba al orden de las cabeceras o de los par&aacute;metros del contenido. En tal caso, la soluci&oacute;n m&aacute;s sencilla es almacenar estos par&aacute;metros en un LinkedHashMap, que mantiene el orden de inserci&oacute;n.</p>
 <h2>Peticiones HTTP</h2>
 <p>Una forma sencilla de probar el servidor es utilizar una herramienta del estilo de <a href="https://chrome.google.com/webstore/detail/dhc-resthttp-api-client" target="_blank" title="DHC">DHC</a>, que facilita el hacer peticiones HTTP a una URL concreta.</p>
 <h2>Base de datos</h2>
-<p>La base de datos utilizada debe contener una única tabla que se llame "HTML" (<strong>deben respetarse las mayúsculas y minúsculas</strong>) con los campos:</p>
+<p>En los tests, la base de datos utilizada por defecto se llama "hstestdb" y se accede con el usuario "hsdb" con password "hsdbpass".</p>
+<p>La base de datos utilizada debe contener una &uacute;nica tabla que se llame "HTML" (<strong>deben respetarse las may&uacute;sculas y min&uacute;sculas</strong>) con los campos:</p>
 <ul>
-<li>"uuid" de tipo CHAR(36). Será la clave primaria.</li>
+<li>"uuid" de tipo CHAR(36). Ser&aacute; la clave primaria.</li>
 <li>"content" de tipo TEXT en MySQL o LONG VARCHAR en JavaDB.</li>
 </ul>
-<p>La base de datos estará creada, por lo que el servidor no debe 
-contener ninguna sentencia ni función de creación de la base de datos.</p>
+<p>La base de datos estar&aacute; creada, por lo que el servidor no debe contener ninguna sentencia ni funci&oacute;n de creaci&oacute;n de la base de datos.</p>
+<p>En el laboratorio SO4 pod&eacute;is acceder a MySQL con el usuario "root" y el password "mysql".</p>
+<h2>Properties</h2>
+<p>La clase Properties de Java es similar a un Map, ya que contiene parejas de clave-valor. En el caso de Properties, el acceso a los valores se hace con getProperty(String key):String y el almacenamiento de valores se hace con setProperty(String key, String value).</p>
+<p>Adem&aacute;s, la clase Properties permite recuperar f&aacute;cilmente las propiedades de un fichero mediante los m&eacute;todos "load". Estos m&eacute;todos esperan que las propiedades est&eacute;n almacenadas en el fichero de la siguiente manera:</p>
+<pre><span style="font-family: 'courier new', courier;">prop1=value1</span><br /><span style="font-family: 'courier new', courier;">prop2=value2</span><br /><span style="font-family: 'courier new', courier;">prop3=value3&nbsp;</span></pre>
+<p>Las propiedades que se utilizar&aacute;n y sus valores por defecto son los siguientes:</p>
+<pre><span style="font-family: 'courier new', courier;">numClients=50</span><br /><span style="font-family: 'courier new', courier;">port=8888<br />db.url=jdbc:mysql://localhost:3306/hstestdb<br />db.user=hsdb<br />db.password=hsdbpass</span></pre>
 <!-- content: html tiny_mce --></body></html>

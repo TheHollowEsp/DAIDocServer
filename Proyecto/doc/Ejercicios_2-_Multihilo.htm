@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1"  />
+</head>
+<body>
+<p><strong>Ejercicio 1) [Proyecto]</strong> Ampl&iacute;a el servidor creado la semana pasada para utilizar un <em>pool</em> de hilos.</p>
+<p><strong>Ejercicio 2) [Proyecto]</strong> Ampl&iacute;a el servidor del ejercicio 1 para que sirva distinto contenido dependiendo de la petici&oacute;n del cliente. Sup&oacute;n que todas las peticiones de los clientes ser&aacute;n a trav&eacute;s del m&eacute;todo GET y que las URLs de las peticiones ser&aacute;n de la forma: <a href="http://localhost/html?uuid=1234">http://localhost/html?uuid=1234.</a> El objetivo, por lo tanto, ser&aacute; que dependiendo del "uuid" recibido se sirva un contenido distinto. Para simplificar este trabajo puedes utilizar un Map&lt;String, String&gt;, donde la clave sea el "uuid" y el valor sea la p&aacute;gina web que se debe servir. Evidentemente, deber&aacute;s rellenar este mapa con alguna p&aacute;gina web antes de poder enviar contenido.</p>
+<p>Es recomendable que el contenido (es decir, el mapa con las p&aacute;ginas web) lo maneje una clase independiente de los hilos servidor y de servicio.</p>
+<p>Para poder ejecutar las pruebas ser&aacute; necesario que la clase es.uvigo.esei.dai.hybridserver.HybridServer tenga un constructor que reciba un Map&lt;String, String&gt; con una lista de p&aacute;ginas (parejas uuid -&gt; contenido) que tendr&aacute; por defecto.</p>
+<p><strong>Ejercicio 3) [Proyecto]</strong> Ampl&iacute;a el servidor para que cuando se haga una petici&oacute;n html sin uuid (p.ej. http://localhost/html) muestre un listado con enlaces a todas las p&aacute;ginas almacenadas. El texto del enlace debe ser el propio UUID.</p>
+<p><strong>Ejercicio 4) [Proyecto]</strong> Ampl&iacute;a el servidor para a&ntilde;adir soporte para los m&eacute;todos POST (creaci&oacute;n de p&aacute;ginas) y DELETE (eliminaci&oacute;n de p&aacute;ginas).</p>
+<p><strong>Ejercicio 5) [Proyecto]</strong> Ampl&iacute;a el servidor para devolver los c&oacute;digos de HTTP correctos cuando se produzca alg&uacute;n error. Estos c&oacute;digos deber&aacute;n ser:</p>
+<ul>
+<li><strong>404 Not Found</strong>: Si se solicita un UUID de una p&aacute;gina que no existe (p.ej. http://localhost/html?uuid=12345678-1234-abcd-1234-0123456789ab y la p&aacute;gina&nbsp;12345678-1234-abcd-1234-0123456789ab no existe). Esto se aplica a los m&eacute;todos GET y DELETE. En POST el par&aacute;metro uuid se ignora.</li>
+<li><strong>400 Bad Request</strong>: Si el recurso no existe (p.ej.&nbsp;http://localhost/xyz?uuid=12345678-1234-abcd-1234-0123456789ab). En la primera entrega solo se considera "html" como recurso v&aacute;lido. En la segunda entrega a&ntilde;adiremos "xml", "xsd" y "xslt" como recursos v&aacute;lidos.</li>
+<li><strong>500 Internal Server Error</strong>: Si se produce alg&uacute;n error no controlado (p.ej. m&aacute;s adelante, si se pierde la conexi&oacute;n con la base de datos) mientras se atiende la petici&oacute;n del cliente.</li>
+</ul>
+<p><strong>Ejercicio 6)</strong> Crea dos versiones de un servidor que realice una tarea pesada, ambas con hilos, pero una sin <em>pool</em> y otra con <em>pool</em>. Para la tarea pesada, puedes utilizar la clase <a href="http://cursos.faitic.uvigo.es/tema1314/claroline/document/goto/index.php/Ejercicios/Primes.java?cidReq=O06G150V01_G150920" target="_blank" title="Prime.java">Prime.java</a>, y hacer que el servidor reciba un n&uacute;mero (utiliza n&uacute;meros un poco grandes) y devuelva el n&uacute;mero de primos que son menores que dicho n&uacute;mero. A continuaci&oacute;n crea un cliente para dicho servidor.</p>
+<p>A continuaci&oacute;n comprueba la diferencia de rendimiento entre los dos servidores, utilizando un alto n&uacute;mero de clientes simult&aacute;neos. Puedes jugar con el n&uacute;mero de hilos activos en el <em>pool</em>.</p>
+<p><strong>Ejercicio 7)</strong> Repite el Dojo pero utilizando el API as&iacute;ncrona de Java (paquete java.nio.channels).</p>
+<!-- content: html tiny_mce --></body></html>

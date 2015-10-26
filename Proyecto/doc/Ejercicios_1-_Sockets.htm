@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1"  />
+</head>
+<body>
+<p><!-- co--></p>
+<p><!--ntent: html tiny_mce --></p>
+<p><strong>Ejercicio 1) [Proyecto]</strong> Crea un servidor HTTP sencillo que siempre devuelva la misma p&aacute;gina HTML. Este servidor debe ser compatible con los navegadores Web habituales por lo que la respuesta debe seguir el formato HTTP. Para llevar a cabo esta tarea es recomendable crear las siguientes clases</p>
+<ul>
+<li>HTTPRequest: Clase que contiene la informaci&oacute;n de una petici&oacute;n HTTP, cuyo constructor recibir&aacute; un Reader y parsear&aacute; para recuperar la informaci&oacute;n de una petici&oacute;n HTTP. La informaci&oacute;n que contendr&aacute; ser&aacute; la siguiente:</li>
+<ul>
+<li>M&eacute;todo: GET, POST, PUT, DELETE, OPTIONS, TRACE, CONNECT, HEAD. M&aacute;s informaci&oacute;n <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html" target="_blank" title="HTTP/1.1 Method Definition">aqu&iacute;</a>.</li>
+<li>Nombre del recurso solicitado (sin los par&aacute;metros). Por ejemplo, en una petici&oacute;n para "/index.php?param1=value1", el nombre del recurso ser&aacute; "index.php".</li>
+<li>Par&aacute;metros GET y POST. En el caso de GET formar&aacute;n parte del rescurso solicitado y en el caso de POST formar&aacute;n parte del recurso solicitado o del cuerpo de la petici&oacute;n. La mejor forma de almacenar estos valores es utilizar un Map&lt;String, String&gt;.</li>
+<li>Par&aacute;metros de la cabecera. Se encuentran despu&eacute;s de la primera l&iacute;nea y siguen el formato "Par&aacute;metro: Valor".&nbsp;&nbsp;La cabecera finaliza cuando hay una l&iacute;nea en blanco. La mejor forma de almacenar estos valores es utilizar un Map&lt;String, String&gt;.</li>
+<li>Longitud del contenido: En el caso de que haya contenido, la cabecera incluir&aacute; el par&aacute;metro "Content-length", que indicar&aacute; la longitud del cuerpo.</li>
+</ul>
+<li>HTTPResponse: Clase que contiene la informaci&oacute;n de una respuesta HTTP. Deber&aacute; disponer de un m&eacute;todo "print(Writer)" que escriba la respuesta en formato HTTP correcto. La informaci&oacute;n que contendr&aacute; ser&aacute; la siguiente:</li>
+<ul>
+<li>Estado: C&oacute;digo de estado del servidor. M&aacute;s informaci&oacute;n <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank" title="HTTP/1.1 Status Code Definitions">aqu&iacute;</a>.</li>
+<li>Versi&oacute;n de HTTP (normalmente, HTTP/1.1)</li>
+<li>Contenido. Ser&aacute; una cadena de texto con el cuerpo de la respuesta.</li>
+<li>Par&aacute;metros de cabecera.&nbsp;La mejor forma de almacenar estos valores es utilizar un Map&lt;String, String&gt;.</li>
+</ul>
+</ul>
+<p><strong>Nota</strong>: Para poder iniciar y parar el servidor necesitar&aacute;s utilizar un hilo y desbloquear al servidor que est&aacute; a la espera de conexiones. Para ello, puedes utilizar la siguiente base de c&oacute;digo: <a href="http://cursos.faitic.uvigo.es/tema1516/claroline/document/goto/index.php/Ejercicios/HybridServer.java?cidReq=O06G150V01962" target="_blank" title="HybridServer.java">HybridServer.java</a>. No te preocupes si hay alguna parte de este c&oacute;digo que no entiendes bien, pues la pr&oacute;xima semana veremos el tema de Multihilo en el que hablaremos sobre este tipo de estructuras.</p>
+<p><span style="font-size: 10px;">&nbsp;</span></p>
+<p><strong>Ejercicio 2)</strong> Crea un juego de tres en raya entre dos aplicaciones de modo que la informaci&oacute;n entre las aplicaciones se transmita en un objeto <a href="http://cursos.faitic.uvigo.es/tema1314/claroline/document/goto/index.php/Ejercicios/TicTacToe.java?cidReq=O06G150V01_G150920" target="_blank" title="TicTacToe.java">TicTacToe</a>. Este objeto representa un tablero sencillo de tres en raya sin comprobaciones de reglas (es posible hacer trampa). Para simplificar el problema puedes dar por supuesto que los usuarios siempre van a realizar un movimiento v&aacute;lido y lo van a introducir de forma correcta.</p>
+<p>El proceso del juego ser&aacute; algo de este estilo:</p>
+<ol>
+<li>Jugador 1 introduce jugada</li>
+<li>La consola del Jugador 1 muestra el nuevo estado del tablero</li>
+<li>Jugador 1 env&iacute;a el objeto tablero al Jugador 2</li>
+<li>Si Jugador 1 ha ganado se avisa por consola y finaliza el juego en Jugador 1</li>
+<li>La consola del Jugador 2 muestra el tablero recibido</li>
+<li>Si Jugador 1 ha ganado se avisa por consola y finaliza el juego en Jugador 2</li>
+<li>Jugador 2 introduce jugada</li>
+<li>La consola del Jugador 2 muestra el nuevo estado del tablero</li>
+<li>Jugador 2 env&iacute;a el objeto tablero al Jugador 1</li>
+<li>Si Jugador 2 ha ganado se avisa por consola y finaliza el juego en Jugador 2</li>
+<li>La consola del Jugador 1 muestra el tablero recibido</li>
+<li>Si Jugador 2 ha ganado se avisa por consola y finaliza el juego en Jugador 1</li>
+<li>Vuelta a 1</li>
+</ol><!-- content: html tiny_mce --></body></html>
