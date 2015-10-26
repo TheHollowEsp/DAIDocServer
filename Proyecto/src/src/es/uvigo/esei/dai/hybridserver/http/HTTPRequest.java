@@ -25,15 +25,15 @@ public class HTTPRequest {
 	private String httpVersion;	
 	public HTTPRequestMethod method;// 1 Metodo	
 	private String resourceName;// 2 Nombre del recurso	
-	private String resourceChain;// 2.1 Ruta del recurso	
+	private String resourceChain;// 2.1 Cadena del recurso	
+	private String[] resourcePath;// 2.1 Ruta del recurso
 	private Map<String, String> ResourceParameters = new LinkedHashMap<String, String>();// 3 Parámetros GET y POST	
 	private Map<String, String> HeaderParameters = new LinkedHashMap<String, String>();// 4 Parámetros de la cabecera.	
 	private int contentLength;// 5 Longitud del contenido	
 	private String content;// 6 Contenido
 	private String contentEntero;
 	private boolean codificado;
-	private String[] x;
-	
+	private String[] x;	
 	private String completo;
 
 
@@ -43,7 +43,7 @@ public class HTTPRequest {
 		String cadena = bread.readLine();
 		String[] splitted = cadena.split("\\s+"); // Separamos la cadena por los espacios
 		try {
-			this.method = HTTPRequestMethod.valueOf(splitted[0]); // Metodo (GET/POST/PUT)
+			this.method = HTTPRequestMethod.valueOf(splitted[0]); // Metodo (GET/POST/PUT/DELETE...)
 		} catch (Exception e) {
 			throw new HTTPParseException("Missing method");
 		}
@@ -58,19 +58,16 @@ public class HTTPRequest {
 			throw new HTTPParseException("Missing version");
 		}
 		if (splitted[1].contains("?")) { // Parametros de la ruta
-			// index.php?nombre=juan&edsd=23
-			String[] aux2 = splitted[1].split("\\?"); // Recogemos lo de despues del ?
-			resourceName = aux2[0].substring(1);		// Recogemos el primer parametro
-			String[] parametros = aux2[1].split("&");	// Dividimos para recoger los siguientes			
-			
-			for (int j = 0; j < parametros.length; j++) { // Recoge los parametros restantes uno por uno
+			// html?uuid=123123&edsd=23
+			String[] aux2 = splitted[1].split("\\?"); // Dividimos en 2 por el ?
+			resourceName = aux2[0].substring(1);		// Recogemos el recurso
+			String[] parametros = aux2[1].split("&");	// Dividimos para recoger los parametros			
+			for (int j = 0; j < parametros.length; j++) { // Recoge los parametros uno por uno
 				String[] aux3 = parametros[j].split("=");
 				ResourceParameters.put(aux3[0], aux3[1]);
-				//auzilio = aux3[0];
-
 			}
 		} else {
-			resourceName = splitted[1].substring(1);
+			resourceName = splitted[1].substring(1);	// Recogemos el recurso
 		}
 		String linea = bread.readLine();
 		while (!linea.matches("")) { // Parametros de la cabecera
@@ -80,10 +77,10 @@ public class HTTPRequest {
 			} catch (Exception e) {
 				throw new HTTPParseException("Missing new line after header");
 			}
-			if (elementos[0].startsWith("Content-Length")) { // Si hay length lo guardamos
+			if (elementos[0].startsWith("Content-Length")) { // Si hay content-length lo guardamos
 				contentLength = Integer.parseInt(elementos[1]);
 			}
-			if (elementos[0].startsWith("Content-Type")) { // Si hay content type lo guardamos
+			if (elementos[0].startsWith("Content-Type")) { // Si hay content-type lo guardamos
 				codificado = true;
 			}
 			linea = bread.readLine();
@@ -116,19 +113,22 @@ public class HTTPRequest {
 	}
 
 	public HTTPRequestMethod getMethod() {
+		//System.out.println("Metodo: "+method);
 		return method;
 	}
 
 	public String getResourceChain() {
+		//System.out.println("Cadena de recurso: "+resourceChain);
 		return resourceChain;
 	}
 
 	public String[] getResourcePath() {
 		// TODO Auto-generated method stub
-		return null;
+		return resourcePath;
 	}
 
 	public String getResourceName() {
+		//System.out.println("Nombre de recurso: "+resourceName);
 		return resourceName;
 	}
 
@@ -137,6 +137,7 @@ public class HTTPRequest {
 	}
 
 	public String getHttpVersion() {
+		//System.out.println("Version HTTP: "+httpVersion);
 		return httpVersion;
 	}
 
@@ -145,10 +146,12 @@ public class HTTPRequest {
 	}
 
 	public String getContent() {
+		System.out.println("Contenido: "+contentEntero);
 		return contentEntero;
 	}
 
 	public int getContentLength() {
+		
 		return contentLength;
 	}
 
