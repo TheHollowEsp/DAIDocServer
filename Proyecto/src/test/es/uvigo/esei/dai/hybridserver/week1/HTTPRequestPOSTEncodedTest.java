@@ -50,6 +50,7 @@ public class HTTPRequestPOSTEncodedTest {
 	public final void testGetResourcePath() {
 		final String[] path = new String[0];
 		
+		
 		assertArrayEquals(path, this.request.getResourcePath());
 	}
 

@@ -34,21 +34,24 @@ public class HTTPRequest {
 	private String contentEntero;
 	private boolean codificado;
 	private String[] x;	
-	private String completo;
+	private String todo;
 
 
 	public HTTPRequest(Reader reader) throws IOException, HTTPParseException {
 
 		BufferedReader bread = new BufferedReader(reader);
 		String cadena = bread.readLine();
+		 
 		String[] splitted = cadena.split("\\s+"); // Separamos la cadena por los espacios
+		
 		try {
 			this.method = HTTPRequestMethod.valueOf(splitted[0]); // Metodo (GET/POST/PUT/DELETE...)
 		} catch (Exception e) {
 			throw new HTTPParseException("Missing method");
 		}
 		try {
-			resourceChain = splitted[1]; // Metodo (GET/POST/PUT)
+			resourceChain = splitted[1];
+			
 		} catch (Exception e1) {
 			throw new HTTPParseException("Missing Resource");
 		}
@@ -107,11 +110,15 @@ public class HTTPRequest {
 			contentEntero = content;							
 			x = content.split("=");
 			content = x[1];
-			completo = x[0].concat(x[1]);
+			todo = x[0].concat(x[1]);
 
 		}
 	}
-
+	
+	public String getTodo() {
+		return todo;
+	}
+	
 	public HTTPRequestMethod getMethod() {
 		//System.out.println("Metodo: "+method);
 		return method;
@@ -119,6 +126,7 @@ public class HTTPRequest {
 
 	public String getResourceChain() {
 		//System.out.println("Cadena de recurso: "+resourceChain);
+		System.out.println(resourceChain);
 		return resourceChain;
 	}
 

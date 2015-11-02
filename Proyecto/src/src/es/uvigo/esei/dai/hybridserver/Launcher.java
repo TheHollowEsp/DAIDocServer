@@ -22,9 +22,9 @@ public class Launcher {
 		Map<String, String> pages = new LinkedHashMap<String, String>();
 		pages.put("1234", "<html><h1> Hello 1234 </h1></html>");
 		pages.put("1235", "<html><h1> Hello 1235 </h1></html>");
-		pages.put("1236", "<html><h1> Hello 1236 </h1></html>");
-		pages.put("1237", "<html><h1> Hello 1237 </h1></html>");
-		pages.put("1238", "<html><h1> Hello 1238 </h1></html>");
+		//pages.put("1236", "<html><h1> Hello 1236 </h1></html>");
+		//pages.put("1237", "<html><h1> Hello 1237 </h1></html>");
+		//pages.put("1238", "<html><h1> Hello 1238 </h1></html>");
 		/* END Borrar antes de entrega */
 
 		if (args.length > 0) {	//////////////////////////////////////////////////////////////// Con Properties
@@ -35,14 +35,17 @@ public class Launcher {
 				System.err.println("Error");
 			} finally {
 				HY = new HybridServer(properties);
+				System.out.println("HybridServer iniciado con DB");
 			}
 
-		} else if (pages != null) {	//////////////////////////////////////////////////////////// Con mapa de paginas
+		} else if (!pages.isEmpty()) {	//////////////////////////////////////////////////////////// Con mapa de paginas
 			HY = new HybridServer(pages);
+			System.out.println("HybridServer iniciado con map");
 		} else { /////////////////////////////////////////////////////////////////////////////// Basico
 			HY = new HybridServer();
+			System.out.println("HybridServer iniciado");
 		}
-		System.out.println("HybridServer iniciado");
+		
 		HY.start();
 	}
 }

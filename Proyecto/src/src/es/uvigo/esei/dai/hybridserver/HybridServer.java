@@ -3,11 +3,17 @@ package es.uvigo.esei.dai.hybridserver;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import com.mysql.jdbc.Connection;
+
+import es.uvigo.esei.dai.hybridserver.http.HtmlDAO;
+import es.uvigo.esei.dai.hybridserver.http.MemoryDAO;
 import es.uvigo.esei.dai.hybridserver.http.ServiceThread;
 
 public class HybridServer {
@@ -18,20 +24,22 @@ public class HybridServer {
 	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1></body></html>";
 	public ExecutorService threadPool;
 	public static int numClientes = 50;
-	private short modo = 0;
-	private Map<String, String> pages;
 	private Properties properties;
+	private String dburl = "jdbc:mysql://localhost/hybridserverdb";
+	private String dbuser = "dai";
+	private String dbpassword = "daipassword";
+	private HtmlDAO dao;
+	private Connection connection;
+	private boolean esDB = false;
 	String uuid = null;
 
 	public HybridServer() {
 		// Constructor necesario para los tests de la primera semana
-
 	}
 
 	public HybridServer(Map<String, String> pages) {
 		// Constructor necesario para los tests de la segunda semana
-		this.pages = pages;
-		modo = 2;
+		dao = new MemoryDAO(pages);
 	}
 
 	public HybridServer(Properties properties) {
@@ -39,11 +47,35 @@ public class HybridServer {
 		this.properties = properties;
 		SERVICE_PORT = Integer.parseInt(properties.getProperty("port"));
 		numClientes = Integer.parseInt(properties.getProperty("numClients"));
-		modo = 3;
+		dburl = properties.getProperty("db.url");
+		dbuser = properties.getProperty("db.user");
+		dbpassword = properties.getProperty("db.password");
+
+		esDB = true; // TODO: Cambiar nombre
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = (Connection) DriverManager.getConnection(dburl, dbuser, dbpassword);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public int getPort() {
 		return SERVICE_PORT;
+	}
+	
+	public Connection getConnection() {
+		return this.connection;
+	}
+
+	public void close() {
+		try {
+			this.connection.close();
+		} catch (SQLException e) {
+			System.err.println("SQLEx en Hybridserver.java");
+			System.err.println(e.getMessage());
+		}
 	}
 
 	public void start() {
@@ -51,31 +83,24 @@ public class HybridServer {
 			@Override
 			public void run() {
 				System.out.println("Hilo servidor iniciado");
-				try (final ServerSocket serverSocket = new ServerSocket(getPort())) {
+				try (final ServerSocket serverSocket = new ServerSocket(SERVICE_PORT)) {
 					ExecutorService threadPool = Executors.newFixedThreadPool(numClientes);
-
+					System.out.println("Pool inicializada");
 					while (true) {
-						Socket clientSocket = serverSocket.accept();
-
-						System.out.println("Peticion aceptada");
-						if (stop)
-							break;
-						switch (modo) {
-						case 2:
-							threadPool.execute(new ServiceThread(pages, clientSocket));
-							break;
-						case 3:
-							threadPool.execute(new ServiceThread(properties, clientSocket));
-							break;
-						default:
-							threadPool.execute(new ServiceThread(clientSocket));
-							break;
+						Socket socket = serverSocket.accept();
+						if (!esDB) {
+							if (stop)
+								break;
+							threadPool.execute(new ServiceThread(socket, dao));
+						} else {
+							if (stop)
+								break;
+							threadPool.execute(new ServiceThread(socket, properties));
 						}
-
 					}
-
 				} catch (IOException e) {
-					System.err.println("IOException en HybridServer.java");
+					System.err.println("IOException en switch HybridServer.java");
+					System.err.println(e.getMessage());
 				}
 			}
 		};
@@ -84,6 +109,8 @@ public class HybridServer {
 
 	}
 
+	/****** CODIGO DEFAULT *****/
+	
 	public void stop() {
 		this.stop = true;
 
@@ -102,5 +129,7 @@ public class HybridServer {
 
 		this.serverThread = null;
 	}
+	
+	/****** FIN CODIGO DEFAULT *****/
 
 }
