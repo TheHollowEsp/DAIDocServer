@@ -17,21 +17,24 @@ import es.uvigo.esei.dai.hybridserver.http.MemoryDAO;
 import es.uvigo.esei.dai.hybridserver.http.ServiceThread;
 
 public class HybridServer {
+	
+	
+	// Basico
 	private static int SERVICE_PORT = 80;
-
+	public static int numClientes = 50;
 	private Thread serverThread;
 	private boolean stop;
-	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1></body></html>";
 	public ExecutorService threadPool;
-	public static int numClientes = 50;
+	// Mapa
+	private HtmlDAO dao;
+	// DB
 	private Properties properties;
 	private String dburl = "jdbc:mysql://localhost/hybridserverdb";
 	private String dbuser = "dai";
-	private String dbpassword = "daipassword";
-	private HtmlDAO dao;
+	private String dbpassword = "daipassword";	
 	private Connection connection;
-	private boolean esDB = false;
-	String uuid = null;
+	private boolean usaDB = false;
+	
 
 	public HybridServer() {
 		// Constructor necesario para los tests de la primera semana
@@ -50,8 +53,7 @@ public class HybridServer {
 		dburl = properties.getProperty("db.url");
 		dbuser = properties.getProperty("db.user");
 		dbpassword = properties.getProperty("db.password");
-
-		esDB = true; // TODO: Cambiar nombre
+		usaDB = true;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = (Connection) DriverManager.getConnection(dburl, dbuser, dbpassword);
@@ -88,7 +90,7 @@ public class HybridServer {
 					System.out.println("Pool inicializada");
 					while (true) {
 						Socket socket = serverSocket.accept();
-						if (!esDB) {
+						if (!usaDB) {
 							if (stop)
 								break;
 							threadPool.execute(new ServiceThread(socket, dao));

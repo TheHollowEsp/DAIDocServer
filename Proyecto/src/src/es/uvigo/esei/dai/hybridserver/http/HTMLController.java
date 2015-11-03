@@ -6,7 +6,7 @@ import java.util.UUID;
 public class HTMLController {
 	private HtmlDAO dao;
 	private HTTPResponse resp;
-	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Página principal de Héctor y Manu.</p></body></html>";
+	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Pagina principal de Hector y Manu.</p></body></html>";
 	private static final String version = "HTTP/1.1";
 	String extension = "";
 	String contenido = "";
@@ -153,8 +153,8 @@ public class HTMLController {
 			}
 		} else {
 			HTTPResponse resp = new HTTPResponse();
-			resp.setContent("Error 500");
-			resp.setStatus(HTTPResponseStatus.S500);
+			resp.setContent("Error 400");
+			resp.setStatus(HTTPResponseStatus.S400);
 			resp.setVersion(version);
 			return resp;
 		}

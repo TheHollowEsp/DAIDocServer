@@ -8,11 +8,11 @@ import java.util.Map;
 import java.util.Properties;
 
 /*
- * TODO: Hilo de servicio para el ExecutorService
+
  * TODO: Generar errores 400, 404, 500
  * TODO: Poner JDBC a funcionar
- * TODO: Permitir POST (Crear formulario, manejarlo y meter a JDBC o a mapa)
- * TODO: Permitir DELETE (Borrar pagina)
+ * TODO: Permitir POST JDBC
+ * TODO: Permitir DELETE JDBC
  */
 
 public class Launcher {
@@ -22,30 +22,34 @@ public class Launcher {
 		Map<String, String> pages = new LinkedHashMap<String, String>();
 		pages.put("1234", "<html><h1> Hello 1234 </h1></html>");
 		pages.put("1235", "<html><h1> Hello 1235 </h1></html>");
-		//pages.put("1236", "<html><h1> Hello 1236 </h1></html>");
-		//pages.put("1237", "<html><h1> Hello 1237 </h1></html>");
-		//pages.put("1238", "<html><h1> Hello 1238 </h1></html>");
-		/* END Borrar antes de entrega */
+		
 
-		if (args.length > 0) {	//////////////////////////////////////////////////////////////// Con Properties
+		if (args.length > 0) { // Con Properties
 			Properties properties = new Properties();
-			try (BufferedReader br = new BufferedReader(new FileReader("config.props"))) {
+			try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
 				properties.load(br);
 			} catch (IOException e) {
-				System.err.println("Error");
+				System.err.println("Error recogiendo propiedades");
 			} finally {
-				HY = new HybridServer(properties);
-				System.out.println("HybridServer iniciado con DB");
+				if(properties.isEmpty()){
+					properties.setProperty("numClients","50");
+					properties.setProperty("port","8888");
+					properties.setProperty("db.url","jdbc:mysql://localhost:3306/hstestdb");
+					properties.setProperty("db.user","hsdb");
+					properties.setProperty("db.password","hsdbpass");
+				}
 			}
+			HY = new HybridServer(properties);
+			System.out.println("HybridServer iniciado con DB");
 
-		} else if (!pages.isEmpty()) {	//////////////////////////////////////////////////////////// Con mapa de paginas
+		} else if (!pages.isEmpty()) { // Con mapa
 			HY = new HybridServer(pages);
 			System.out.println("HybridServer iniciado con map");
-		} else { /////////////////////////////////////////////////////////////////////////////// Basico
+		} else { // Basico
 			HY = new HybridServer();
 			System.out.println("HybridServer iniciado");
 		}
-		
+
 		HY.start();
 	}
 }

@@ -45,9 +45,7 @@ public class ServiceThread implements Runnable {
 				HTTPRequest request = new HTTPRequest(lector);
 				HTMLControllerDB controlador = new HTMLControllerDB(pr);
 				HTTPResponse response = controlador.processDB(request);
-				try( OutputStreamWriter writer = new OutputStreamWriter(socket.getOutputStream())){				
-				response.print(writer);
-				}
+				response.print(new OutputStreamWriter(socket.getOutputStream()));
 			}
 			
 
