@@ -6,6 +6,7 @@
 .project
 .metadata
 bin/
+test_bin/
 tmp/
 *.tmp
 *.bak
@@ -29,7 +30,5 @@ local.properties
 .buildpath
 
 
-Proyecto/src/bin/
 
-Proyecto/src/test_bin/
 
