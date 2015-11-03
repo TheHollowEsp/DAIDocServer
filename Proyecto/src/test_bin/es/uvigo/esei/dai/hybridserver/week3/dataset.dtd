@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!ELEMENT dataset (HTML+)>
-<!ELEMENT HTML EMPTY>
-<!ATTLIST HTML
-	uuid CDATA #REQUIRED
-	content CDATA #REQUIRED
->
