@@ -55,6 +55,9 @@ public class ServiceThread implements Runnable {
 		} catch (HTTPParseException e) {
 			e("HTTPParseException en ServiceThread");
 			e(e.getMessage());
+		} catch (NullPointerException e3) {
+			e("NullPointer en ServiceThread");
+			e(e3.getMessage());
 		}
 	}
 

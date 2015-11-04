@@ -37,7 +37,7 @@ public class HTTPRequest {
 	private String todo;
 
 
-	public HTTPRequest(Reader reader) throws IOException, HTTPParseException {
+	public HTTPRequest(Reader reader) throws IOException, HTTPParseException, NullPointerException {
 
 		BufferedReader bread = new BufferedReader(reader);
 		String cadena = bread.readLine();
@@ -126,7 +126,7 @@ public class HTTPRequest {
 
 	public String getResourceChain() {
 		//System.out.println("Cadena de recurso: "+resourceChain);
-		System.out.println(resourceChain);
+		
 		return resourceChain;
 	}
 
@@ -154,7 +154,7 @@ public class HTTPRequest {
 	}
 
 	public String getContent() {
-		System.out.println("Contenido: "+contentEntero);
+		
 		return contentEntero;
 	}
 

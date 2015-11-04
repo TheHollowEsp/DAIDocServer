@@ -127,6 +127,7 @@ public class HTMLController {
 			}
 
 		} else if (request.getMethod() == HTTPRequestMethod.DELETE) {
+			if (request.getResourceChain().contains("/html?uuid=")){
 			String[] key = request.getResourceChain().split("=");
 			HTTPResponse resp = new HTTPResponse();
 			resp.setVersion(version);
@@ -149,6 +150,13 @@ public class HTMLController {
 					resp.setStatus(HTTPResponseStatus.S404);
 					return resp;
 				}
+				return resp;
+				}
+			} else {
+				HTTPResponse resp = new HTTPResponse();
+				resp.setContent("Error 400");
+				resp.setStatus(HTTPResponseStatus.S400);
+				resp.setVersion(version);
 				return resp;
 			}
 		} else {

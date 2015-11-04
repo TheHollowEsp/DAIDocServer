@@ -1,4 +1,4 @@
-package es.uvigo.esei.dai.hybridserver.database;
+package es.uvigo.esei.dai.hybridserver.http;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +11,7 @@ import java.util.Properties;
 import java.util.UUID;
 
 import es.uvigo.esei.dai.hybridserver.HybridServer;
-import es.uvigo.esei.dai.hybridserver.http.*;
+
 
 public class DBDAO implements HtmlDAO {
 	protected final String TABLE_NAME = "HTML";
