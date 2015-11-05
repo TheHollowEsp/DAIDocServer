@@ -63,6 +63,18 @@ public class HTTPRequest {
 		if (splitted[1].contains("?")) { // Parametros de la ruta
 			// html?uuid=123123&edsd=23
 			String[] aux2 = splitted[1].split("\\?"); // Dividimos en 2 por el ?
+			/////// Pruebas
+			// aux2[0] = /hello/world.html
+			 
+			resourcePath = aux2[0].split("\\/");
+			
+			for(int j = 0; j < resourcePath.length; j++){		
+					
+					System.err.println(resourcePath[j]);
+				
+			}
+			//////// Fin pruebas
+			
 			resourceName = aux2[0].substring(1);		// Recogemos el recurso
 			String[] parametros = aux2[1].split("&");	// Dividimos para recoger los parametros			
 			for (int j = 0; j < parametros.length; j++) { // Recoge los parametros uno por uno
