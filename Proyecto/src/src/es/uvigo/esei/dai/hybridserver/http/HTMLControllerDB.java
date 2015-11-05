@@ -3,7 +3,6 @@ package es.uvigo.esei.dai.hybridserver.http;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
-import java.util.UUID;
 
 public class HTMLControllerDB {
 	private HTTPResponse resp;
@@ -131,7 +130,7 @@ public class HTMLControllerDB {
 						resp = new HTTPResponse();
 						HTTPResponseStatus status = HTTPResponseStatus.S200;
 						resp.setStatus(status);
-						String content = "<html><body><h1>Pagina insertada:</h1><a href=\"http://127.0.0.1/html?uuid="+ uuid + "\">"+uuid+"</a></body></html>";
+						String content = "<html><body><h1>Pagina insertada:</h1><a href=\"html?uuid=" + uuid + "\">" + uuid + "</a></body></html>";
 						
 						resp.setContent(content);
 						resp.setVersion(version);

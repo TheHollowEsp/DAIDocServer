@@ -114,8 +114,7 @@ public class HTMLController {
 			HTTPResponse resp = new HTTPResponse();
 			HTTPResponseStatus status = HTTPResponseStatus.S200;
 			resp.setStatus(status);
-			String content = "<html><body><h1>Pagina añadida:</h1><a href=\"http://127.0.0.1/html?uuid="
-					+ uuid.toString() + "\"></body></html>";
+			String content = "<html><body><h1>Pagina añadida:</h1><a href=\"html?uuid=" + uuid.toString() + "\">" + uuid.toString() + "</a></body></html>";
 			resp.setContent(content);
 			resp.setVersion(version);
 			return resp;
