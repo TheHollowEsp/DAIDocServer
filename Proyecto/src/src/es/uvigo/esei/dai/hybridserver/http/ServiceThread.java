@@ -5,13 +5,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Properties;
+
+import com.mysql.jdbc.Connection;
 
 public class ServiceThread implements Runnable {
 	private Socket clientSocket;
 	HtmlDAO dao;
-	Properties pr;
+	Properties props;
 	private boolean usaDB = false;
+	private String dburl = "jdbc:mysql://localhost:3306/hstestdb";
+	private String dbuser = "hsdb";
+	private String dbpassword = "hsdbpass";
+	private HTTPResponse response;
+	private static final String version = "HTTP/1.1";
+	private Connection connection;
 	
 
 	public ServiceThread(Socket clientSocket, HtmlDAO dao){
@@ -20,9 +30,9 @@ public class ServiceThread implements Runnable {
 		
 	}
 
-	public ServiceThread(Socket clientSocket, Properties pr){
+	public ServiceThread(Socket clientSocket, Properties props){
 		this.clientSocket = clientSocket;
-		this.pr = pr;
+		this.props = props;
 		usaDB = true;
 	}
 
@@ -30,21 +40,45 @@ public class ServiceThread implements Runnable {
 	public void run() {
 		try (Socket socket = this.clientSocket) {
 
-			p("Hilo de servicio iniciado.");
 			if (!usaDB) {
-				p("Modo sin DB");
+				p("Hilo de servicio iniciado. Modo sin DB");
 				BufferedReader lector = new BufferedReader(
 				new InputStreamReader(socket.getInputStream()));
 				HTTPRequest request = new HTTPRequest(lector);
 				HTMLController controlador = new HTMLController(dao);
-				HTTPResponse response = controlador.process(request);
+				response = controlador.process(request);
 				response.print(new OutputStreamWriter(socket.getOutputStream()));
 			} else {
-				p("Modo con DB");
+				p("Hilo de servicio iniciado. Modo con DB");
 				BufferedReader lector = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				HTTPRequest request = new HTTPRequest(lector);
-				HTMLControllerDB controlador = new HTMLControllerDB(pr);
-				HTTPResponse response = controlador.processDB(request);
+				
+				dburl = this.props.getProperty("db.url");
+				dbuser = this.props.getProperty("db.user");
+				dbpassword = this.props.getProperty("db.password");
+				try {
+					connection = (Connection) DriverManager.getConnection(dburl, dbuser, dbpassword);
+				} catch (SQLException e) {
+					e("SERVICETHREAD:No se pudo conectar a la DB");
+					response = new HTTPResponse();
+					response.setVersion(version);
+					response.setStatus(HTTPResponseStatus.S500);
+					response.setContent("Error conectando a la DB");
+					response.print(new OutputStreamWriter(socket.getOutputStream()));
+				}
+				
+				HTMLControllerDB controlador = new HTMLControllerDB(connection,props);				
+				response = controlador.processDB(request);
+				try {
+					connection.close();
+				} catch (SQLException e) {
+					e("SERVICETHREAD: Error cerrando la conexion DB");
+					response = new HTTPResponse();
+					response.setVersion(version);
+					response.setStatus(HTTPResponseStatus.S500);
+					response.setContent("Error cerrando la DB");
+					response.print(new OutputStreamWriter(socket.getOutputStream()));
+				}
 				response.print(new OutputStreamWriter(socket.getOutputStream()));
 			}
 			
@@ -55,10 +89,7 @@ public class ServiceThread implements Runnable {
 		} catch (HTTPParseException e) {
 			e("HTTPParseException en ServiceThread");
 			e(e.getMessage());
-		} catch (NullPointerException e3) {
-			e("NullPointer en ServiceThread");
-			e(e3.getMessage());
-		}
+		} 
 	}
 
 	public void p(String s) {

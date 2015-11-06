@@ -4,29 +4,40 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
 
+import com.mysql.jdbc.Connection;
+
 public class HTMLControllerDB {
 	private HTTPResponse resp;
 	private static final String version = "HTTP/1.1";
-	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Pagina principal de Hector y Manu.</p></body></html>";
+	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Pagina principal de Hector y Manu.</p><a href=\"/html\">Indice</a></body></html>";
 	String extension = "";
 	String content = "";
-	private Properties props;
+	private Connection connection;
 
 	private boolean pruebas = false;
+	private Properties props;
 
-	public HTMLControllerDB(Properties props) {
+	public HTMLControllerDB(Connection connection, Properties props) {
+		this.connection = connection;
 		this.props = props;
 	}
 
 	public HTTPResponse processDB(HTTPRequest request) {
-		DBDAO db = new DBDAO(props);
+		DBDAO db = null;
 		resp = new HTTPResponse();
 		resp.setVersion(version);
+		try {
+			db = new DBDAO(connection);
+		} catch (Exception e1) {
+			e("No se pudo conectar a la DB");
+			e1.printStackTrace();
+			resp.setStatus(HTTPResponseStatus.S500);
+			resp.setContent("Error 500 - No se pudo conectar a la DB");
+			return resp;
+		}
+		
 		if (pruebas) { // Comprobar funcionamiento base			
-			resp.setStatus(HTTPResponseStatus.S200);			
-			content = "<h1>HybridServer con DB funcionando</h1>";
-			content += "Propiedades:\n" + props.toString();
-			resp.setContent(content);
+			
 		} else {
 			if (request.getMethod() == HTTPRequestMethod.GET) { // GET
 				if (request.getResourceChain().equals("/")) { // Bienvenida
@@ -75,7 +86,7 @@ public class HTMLControllerDB {
 						resp.setStatus(HTTPResponseStatus.S404);
 					}
 				} else {
-					e("Error 400");
+					e("Error 400 - peticion mal formada");
 					resp.setContent("Error 400 - Petición mal formada");
 					resp.setStatus(HTTPResponseStatus.S400);
 				}
@@ -87,16 +98,6 @@ public class HTMLControllerDB {
 					// Si no hay porno y
 					if (request.getResourceParameters().get("uuid") != null) {
 						// Peticion con uuid -> Actualizar post
-						// TODO: Utilizarla
-						/*p("Actualizando post");
-						String uuid = request.getResourceParameters().get("uuid");
-						String contenido = request.getResourceParameters().get("html");
-						
-						HTTPResponseStatus status = HTTPResponseStatus.S200;
-						resp.setStatus(status);
-						String content = "<html><body><h1>Pagina añadida:</h1><a href=\"http://127.0.0.1/html?uuid="
-								+ uuid.toString() + "\"></body></html>";
-						resp.setContent(content);*/
 					} else {
 						// Peticion sin uuid -> Insertar
 						p("Metiendo post");

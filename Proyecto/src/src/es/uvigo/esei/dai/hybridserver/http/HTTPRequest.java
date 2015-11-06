@@ -6,11 +6,6 @@ HTTPRequest: Clase que contiene la información de una petición HTTP, cuyo cons
   3  Parámetros GET y POST. En el caso de GET formarán parte del rescurso solicitado y en el caso de POST formarán parte del recurso solicitado o del cuerpo de la petición. La mejor forma de almacenar estos valores es utilizar un Map<String, String>.
   4  Parámetros de la cabecera. Se encuentran después de la primera línea y siguen el formato "Parámetro: Valor".  La cabecera finaliza cuando hay una línea en blanco. La mejor forma de almacenar estos valores es utilizar un Map<String, String>.
   5  Longitud del contenido: En el caso de que haya contenido, la cabecera incluirá el parámetro "Content-length", que indicará la longitud del cuerpo.
-
-
-
-	 GET /pub/WWW/TheProject.html HTTP/1.1
-       Host: www.w3.org
 */
 package es.uvigo.esei.dai.hybridserver.http;
 
@@ -33,17 +28,20 @@ public class HTTPRequest {
 	private String content;// 6 Contenido
 	private String contentEntero;
 	private boolean codificado;
-	private String[] x;	
+	private String[] buffer;	
 	private String todo;
 
 
-	public HTTPRequest(Reader reader) throws IOException, HTTPParseException, NullPointerException {
+	public HTTPRequest(Reader reader) throws IOException, HTTPParseException, NullPointerException{
 
 		BufferedReader bread = new BufferedReader(reader);
 		String cadena = bread.readLine();
-		 
-		String[] splitted = cadena.split("\\s+"); // Separamos la cadena por los espacios
-		
+		String[] splitted = null;
+		try{
+		splitted = cadena.split("\\s+"); // Separamos la cadena por los espacios
+		}catch (NullPointerException e) {
+			System.err.println("NullPointerException separando cadena inicial de peticion");
+		} 
 		try {
 			this.method = HTTPRequestMethod.valueOf(splitted[0]); // Metodo (GET/POST/PUT/DELETE...)
 		} catch (Exception e) {
@@ -51,7 +49,6 @@ public class HTTPRequest {
 		}
 		try {
 			resourceChain = splitted[1];
-			
 		} catch (Exception e1) {
 			throw new HTTPParseException("Missing Resource");
 		}
@@ -61,30 +58,21 @@ public class HTTPRequest {
 			throw new HTTPParseException("Missing version");
 		}
 		if (splitted[1].contains("?")) { // Parametros de la ruta
-			// html?uuid=123123&edsd=23
-			String[] aux2 = splitted[1].split("\\?"); // Dividimos en 2 por el ?		
-			 
-			resourceName = aux2[0].substring(1);
+			String[] buffer2 = splitted[1].split("\\?"); // Dividimos en 2 por el ?		
+			resourceName = buffer2[0].substring(1);
 			resourcePath = resourceName.split("\\/");
-			
-			
-					// Recogemos el recurso
-			String[] parametros = aux2[1].split("&");	// Dividimos para recoger los parametros			
+			String[] parametros = buffer2[1].split("&");	// Dividimos para recoger los parametros			
 			for (int j = 0; j < parametros.length; j++) { // Recoge los parametros uno por uno
-				String[] aux3 = parametros[j].split("=");
-				ResourceParameters.put(aux3[0], aux3[1]);
+				String[] buffer3 = parametros[j].split("=");
+				ResourceParameters.put(buffer3[0], buffer3[1]);
 			}
 		} else {
 			resourceName = splitted[1].substring(1);	// Recogemos el recurso
-			
-			if (resourceName.contains("/")){
-			resourcePath = resourceName.split("\\/");
+			if (resourceName.length() > 0){
+				resourcePath = resourceName.split("\\/");
 			} else {
 				resourcePath = new String[0];
 			}
-			
-			
-			
 		}
 		String linea = bread.readLine();
 		while (!linea.matches("")) { // Parametros de la cabecera
@@ -114,18 +102,17 @@ public class HTTPRequest {
 			if (content.contains("&")) { 						// Si tiene varios parametros
 				String[] p = content.split("&"); 				// Separamos por parametro
 				for (int j = 0; j < p.length; j++) { 			// Y guardamos cada uno
-					String[] aux3 = p[j].split("="); 			// Separando clave y valor
-					ResourceParameters.put(aux3[0], aux3[1]);	
+					String[] buffer3 = p[j].split("="); 			// Separando clave y valor
+					ResourceParameters.put(buffer3[0], buffer3[1]);	
 				}
 			} else {											// Si no tiene mas que uno
 				String[] param = content.split("=");			// Guardamos
 				ResourceParameters.put(param[0], param[1]);
 			}
 			contentEntero = content;							
-			x = content.split("=");
-			content = x[1];
-			todo = x[0].concat(x[1]);
-
+			buffer = content.split("=");
+			content = buffer[1];
+			todo = buffer[0].concat(buffer[1]);
 		}
 	}
 	

@@ -3,7 +3,6 @@ package es.uvigo.esei.dai.hybridserver;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.Properties;
@@ -29,9 +28,7 @@ public class HybridServer {
 	private HtmlDAO dao;
 	// DB
 	private Properties properties;
-	private String dburl = "jdbc:mysql://localhost/hybridserverdb";
-	private String dbuser = "dai";
-	private String dbpassword = "daipassword";	
+	
 	private Connection connection;
 	private boolean usaDB = false;
 	
@@ -50,16 +47,9 @@ public class HybridServer {
 		this.properties = properties;
 		SERVICE_PORT = Integer.parseInt(properties.getProperty("port"));
 		numClientes = Integer.parseInt(properties.getProperty("numClients"));
-		dburl = properties.getProperty("db.url");
-		dbuser = properties.getProperty("db.user");
-		dbpassword = properties.getProperty("db.password");
+		
 		usaDB = true;
-		try {
-			
-			connection = (Connection) DriverManager.getConnection(dburl, dbuser, dbpassword);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 
 	}
 
