@@ -62,20 +62,13 @@ public class HTTPRequest {
 		}
 		if (splitted[1].contains("?")) { // Parametros de la ruta
 			// html?uuid=123123&edsd=23
-			String[] aux2 = splitted[1].split("\\?"); // Dividimos en 2 por el ?
-			/////// Pruebas
-			// aux2[0] = /hello/world.html
+			String[] aux2 = splitted[1].split("\\?"); // Dividimos en 2 por el ?		
 			 
-			resourcePath = aux2[0].split("\\/");
+			resourceName = aux2[0].substring(1);
+			resourcePath = resourceName.split("\\/");
 			
-			for(int j = 0; j < resourcePath.length; j++){		
-					
-					System.err.println(resourcePath[j]);
-				
-			}
-			//////// Fin pruebas
 			
-			resourceName = aux2[0].substring(1);		// Recogemos el recurso
+					// Recogemos el recurso
 			String[] parametros = aux2[1].split("&");	// Dividimos para recoger los parametros			
 			for (int j = 0; j < parametros.length; j++) { // Recoge los parametros uno por uno
 				String[] aux3 = parametros[j].split("=");
@@ -83,6 +76,15 @@ public class HTTPRequest {
 			}
 		} else {
 			resourceName = splitted[1].substring(1);	// Recogemos el recurso
+			
+			if (resourceName.contains("/")){
+			resourcePath = resourceName.split("\\/");
+			} else {
+				resourcePath = new String[0];
+			}
+			
+			
+			
 		}
 		String linea = bread.readLine();
 		while (!linea.matches("")) { // Parametros de la cabecera
@@ -143,7 +145,6 @@ public class HTTPRequest {
 	}
 
 	public String[] getResourcePath() {
-		// TODO Auto-generated method stub
 		return resourcePath;
 	}
 

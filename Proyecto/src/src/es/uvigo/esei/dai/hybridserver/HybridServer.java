@@ -55,7 +55,7 @@ public class HybridServer {
 		dbpassword = properties.getProperty("db.password");
 		usaDB = true;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			
 			connection = (Connection) DriverManager.getConnection(dburl, dbuser, dbpassword);
 		} catch (Exception e) {
 			e.printStackTrace();

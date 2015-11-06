@@ -14,7 +14,7 @@ public class HTMLController {
 
 	public HTMLController(HtmlDAO dao) {
 		this.dao = dao;
-		
+
 	}
 
 	public HTTPResponse process(HTTPRequest request) {
@@ -45,16 +45,16 @@ public class HTMLController {
 				String form = "<form action=\"http://localhost/html\" method=\"POST\"><textarea name=\"html\" required></textarea><button type=\"submit\">Postear</button></form>";
 				content += form;
 				Map<String, String> pages = null;
-				try{
-				pages = dao.getMapa();
-				} catch (NullPointerException e){
+				try {
+					pages = dao.getMapa();
+				} catch (NullPointerException e) {
 					e("Mapa vacio");
-					
+
 					content += "<p>No hay paginas en este momento</p>";
 					content += "</body></html>";
 					resp.setContent(content);
 					return resp;
-				}	
+				}
 				content += "<ul>";
 				// Mostramos todos los uuid posibles como link
 				for (String currentKey : pages.keySet()) {
@@ -63,13 +63,12 @@ public class HTMLController {
 					content += "</li>";
 				}
 				content += "</ul>";
-				
+
 				content += "</body></html>";
 				resp.setContent(content);
-				
-				
+
 				return resp;
-				
+
 			} else if (request.getResourceChain().contains("/html?uuid=")) {
 				// Peticion con uuid
 				System.out.println("Tiene UUID seteado");
@@ -98,7 +97,7 @@ public class HTMLController {
 			} else {
 				HTTPResponse pagina = new HTTPResponse();
 				e("Error 400");
-				pagina.setContent("Error 400 - Petición mal formada");
+				pagina.setContent("<html><body><h1>Error 400:</h1><p>Peticion mal formada.</p></body></html>");
 				pagina.setStatus(HTTPResponseStatus.S400);
 				pagina.setVersion(version);
 				return pagina;
@@ -106,54 +105,47 @@ public class HTMLController {
 
 			// Peticion no vacia mal formada -> 400
 		} else if (request.getMethod() == HTTPRequestMethod.POST) {
-			if (!request.getTodo().contains("xxx")) { // Si hay contenido inapropiado
-			p("Metiendo post");
-			UUID uuid = UUID.randomUUID();
-			Map<String, String> pages = dao.getMapa();
-			pages.put(uuid.toString(), request.getResourceParameters().get("html"));
-			HTTPResponse resp = new HTTPResponse();
-			HTTPResponseStatus status = HTTPResponseStatus.S200;
-			resp.setStatus(status);
-			String content = "<html><body><h1>Pagina añadida:</h1><a href=\"html?uuid=" + uuid.toString() + "\">" + uuid.toString() + "</a></body></html>";
-			resp.setContent(content);
-			resp.setVersion(version);
-			return resp;
-			}else{
-			HTTPResponse resp = new HTTPResponse();
-			resp.setStatus(HTTPResponseStatus.S400);
-			resp.setVersion(version);
-			return resp;
+			if (!request.getTodo().contains("xxx")) { // Si hay contenido
+														// inapropiado
+				p("Metiendo post");
+				UUID uuid = UUID.randomUUID();
+				Map<String, String> pages = dao.getMapa();
+				pages.put(uuid.toString(), request.getResourceParameters().get("html"));
+				HTTPResponse resp = new HTTPResponse();
+				HTTPResponseStatus status = HTTPResponseStatus.S200;
+				resp.setStatus(status);
+				String content = "<html><body><h1>Pagina añadida:</h1><a href=\"html?uuid=" + uuid.toString() + "\">"
+						+ uuid.toString() + "</a></body></html>";
+				resp.setContent(content);
+				resp.setVersion(version);
+				return resp;
+			} else {
+				HTTPResponse resp = new HTTPResponse();
+				resp.setStatus(HTTPResponseStatus.S400);
+				resp.setVersion(version);
+				return resp;
 			}
 
 		} else if (request.getMethod() == HTTPRequestMethod.DELETE) {
-			if (request.getResourceChain().contains("/html?uuid=")){
-			String[] key = request.getResourceChain().split("=");
-			HTTPResponse resp = new HTTPResponse();
-			resp.setVersion(version);
-			if (!dao.exists(key[1])) {
-				resp.setStatus(HTTPResponseStatus.S404);
-				resp.setContent(
-						"<html><body><h1>Error 404:</h1><p>No existe la página que quieres borrar.</p></body></html>");
-				return resp;
-			} else if (dao.exists(key[1])) {
-				boolean estado = dao.delete(key[1]);
-				resp.setStatus(HTTPResponseStatus.S200);
-				resp.setContent("<html><body><h1>Petición DELETE aceptada</h1><p>Borrado de pagina " + key[1]
-						+ " con estado " + estado + "</p></body></html>");
-				return resp;
-			} else {
-				resp.setContent("No se pudo borrar"); // TODO: Formatear html
-				resp.setStatus(HTTPResponseStatus.S200);
-				if (dao.exists(key[1])) {
-					resp.setContent("The page already exists");
+			if (request.getResourceChain().contains("/html?uuid=")) {
+				String[] key = request.getResourceChain().split("=");
+				HTTPResponse resp = new HTTPResponse();
+				resp.setVersion(version);
+				if (!dao.exists(key[1])) {
 					resp.setStatus(HTTPResponseStatus.S404);
+					resp.setContent(
+							"<html><body><h1>Error 404:</h1><p>No existe la pagina que quieres borrar.</p></body></html>");
 					return resp;
-				}
-				return resp;
+				} else {
+					boolean estado = dao.delete(key[1]);
+					resp.setStatus(HTTPResponseStatus.S200);
+					resp.setContent("<html><body><h1>Petición DELETE aceptada</h1><p>Borrado de pagina " + key[1]
+							+ " con estado " + estado + "</p></body></html>");
+					return resp;
 				}
 			} else {
 				HTTPResponse resp = new HTTPResponse();
-				resp.setContent("Error 400");
+				resp.setContent("<html><body><h1>Error 400:</h1><p>Peticion mal formada.</p></body></html>");
 				resp.setStatus(HTTPResponseStatus.S400);
 				resp.setVersion(version);
 				return resp;

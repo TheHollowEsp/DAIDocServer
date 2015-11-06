@@ -7,13 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
-/*
 
- * TODO: Generar errores 400, 404, 500
- * TODO: Poner JDBC a funcionar
- * TODO: Permitir POST JDBC
- * TODO: Permitir DELETE JDBC
- */
 
 public class Launcher {
 	public static void main(String[] args) {
