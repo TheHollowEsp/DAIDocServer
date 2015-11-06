@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="2" hostname="Hollow-W10" id="0" name="HybridServerFirstReleaseTestSuite" package="es.uvigo.esei.dai.hybridserver" skipped="0" tests="116" time="3.661" timestamp="2015-11-06T12:37:40">
+  <testsuite errors="0" failures="0" hostname="Hollow_ITX" id="0" name="HybridServerFirstReleaseTestSuite" package="es.uvigo.esei.dai.hybridserver" skipped="0" tests="116" time="3.722" timestamp="2015-11-06T20:57:13">
       <properties>
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -14,9 +14,9 @@
 
           <property name="ant.file.type.HybridServer" value="file" />
 
-          <property name="os.name" value="Windows 10" />
+          <property name="os.name" value="Windows 8.1" />
 
-          <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_60\lib\resources.jar;C:\Program Files\Java\jre1.8.0_60\lib\rt.jar;C:\Program Files\Java\jre1.8.0_60\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_60\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_60\lib\jce.jar;C:\Program Files\Java\jre1.8.0_60\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_60\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_60\classes" />
+          <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_65\lib\resources.jar;C:\Program Files\Java\jre1.8.0_65\lib\rt.jar;C:\Program Files\Java\jre1.8.0_65\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_65\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_65\lib\jce.jar;C:\Program Files\Java\jre1.8.0_65\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_65\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_65\classes" />
 
           <property name="sun.desktop" value="windows" />
 
@@ -24,7 +24,7 @@
 
           <property name="ant.home" value="C:\Users\Hollow\.p2\pool\plugins\org.apache.ant_1.9.4.v201504302020" />
 
-          <property name="java.runtime.version" value="1.8.0_60-b27" />
+          <property name="java.runtime.version" value="1.8.0_65-b17" />
 
           <property name="report.file" value="test.report" />
 
@@ -32,19 +32,19 @@
 
           <property name="user.language" value="es" />
 
-          <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_60\bin" />
+          <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_65\bin" />
 
           <property name="ant.project.default-target" value="release" />
 
           <property name="ant.project.name" value="HybridServer" />
 
-          <property name="java.version" value="1.8.0_60" />
+          <property name="java.version" value="1.8.0_65" />
 
           <property name="user.timezone" value="" />
 
           <property name="sun.arch.data.model" value="64" />
 
-          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_60\lib\endorsed" />
+          <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre1.8.0_65\lib\endorsed" />
 
           <property name="sun.cpu.isalist" value="amd64" />
 
@@ -60,17 +60,17 @@
 
           <property name="user.country" value="ES" />
 
-          <property name="java.home" value="C:\Program Files\Java\jre1.8.0_60" />
+          <property name="java.home" value="C:\Program Files\Java\jre1.8.0_65" />
 
           <property name="java.vm.info" value="mixed mode" />
 
           <property name="ant.file" value="C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\build.xml" />
 
-          <property name="os.version" value="10.0" />
+          <property name="os.version" value="6.3" />
 
           <property name="path.separator" value=";" />
 
-          <property name="java.vm.version" value="25.60-b23" />
+          <property name="java.vm.version" value="25.65-b01" />
 
           <property name="report.dir" value="C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\report" />
 
@@ -80,7 +80,7 @@
 
           <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
 
-          <property name="group" value="Grupo.X.Y" />
+          <property name="group" value="Grupo.2.7" />
 
           <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
 
@@ -94,7 +94,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_60\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_60/bin/server;C:/Program Files/Java/jre1.8.0_60/bin;C:/Program Files/Java/jre1.8.0_60/lib/amd64;C:\Program Files (x86)\Kingston SSD Toolbox;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\php;C:\ProgramData\ComposerSetup\bin;;C:\Program Files (x86)\Nmap;C:\Windows\System32;;." />
+          <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_65\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_65/bin/server;C:/Program Files/Java/jre1.8.0_65/bin;C:/Program Files/Java/jre1.8.0_65/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Hollow\AppData\Local\Code\bin;C:\Users\Hollow\Desktop;;." />
 
           <property name="java.vendor.url" value="http://java.oracle.com/" />
 
@@ -102,7 +102,7 @@
 
           <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner es.uvigo.esei.dai.hybridserver.HybridServerFirstReleaseTestSuite skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\test.report.xml crashfile=C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\junitvmwatcher3956866528544790828.properties propsfile=C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\junit8189575812188322653.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner es.uvigo.esei.dai.hybridserver.HybridServerFirstReleaseTestSuite skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\test.report.xml crashfile=C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\junitvmwatcher6767743438127640876.properties propsfile=C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\junit1318690172375884099.properties" />
 
           <property name="java.class.path" value="C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\bin;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\test_bin;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\ant-junit.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\commons-logging-1.1.3.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\dbunit-2.4.9.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\derby.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\fluent-hc-4.3.5.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\hamcrest-all-1.3.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\httpclient-4.3.5.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\httpcore-4.3.2.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\junit-4.11.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\mysql-connector-java-5.1.22-bin.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\slf4j-api-1.7.7.jar;C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src\lib\slf4j-simple-1.7.7.jar;C:\Users\Hollow\.p2\pool\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-launcher.jar;C:\Users\Hollow\.p2\pool\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant.jar;C:\Users\Hollow\.p2\pool\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-junit.jar;C:\Users\Hollow\.p2\pool\plugins\org.apache.ant_1.9.4.v201504302020\lib\ant-junit4.jar" />
 
@@ -126,7 +126,7 @@
 
           <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
 
-          <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_60\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+          <property name="java.ext.dirs" value="C:\Program Files\Java\jre1.8.0_65\lib\ext;C:\Windows\Sun\Java\lib\ext" />
 
           <property name="user.dir" value="C:\Users\Hollow\Documents\GitHub\DAIDocServer\Proyecto\src" />
 
@@ -148,25 +148,25 @@
 
       </properties>
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.WelcomePageTest" name="testMultipleWelcome" time="0.551" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.WelcomePageTest" name="testMultipleWelcome" time="0.497" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.WelcomePageTest" name="testWelcome" time="0.012" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.WelcomePageTest" name="testWelcome" time="0.501" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing method]" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing method]" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing resource]" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing version]" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing version]" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing first line]" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Invalid header]" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Invalid header]" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing new line after header]" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPBadRequestsTest" name="test[Missing new line after header]" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetResourceChain" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetResourceChain" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testToString" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testToString" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetHttpVersion" time="0.001" />
 
@@ -174,68 +174,63 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetResourceName" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetResourcePath" time="0.002" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetResourcePath" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetContent" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetContent" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetMethod" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetContentLength" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetContentLength" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETRootTest" name="testGetResourceParameters" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourceChain" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourceChain" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testToString" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testToString" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetHttpVersion" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetHeaderParameters" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourceName" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourceName" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourcePath" time="0.005">
-          <failure message="array lengths differed, expected.length=1 actual.length=0" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: array lengths differed, expected.length=1 actual.length=0
-	at es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest.testGetResourcePath(HTTPRequestGETResourceTest.java:48)
-</failure>
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourcePath" time="0.0" />
 
-      </testcase>
-
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetContent" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetContent" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetMethod" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetContentLength" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetContentLength" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourceParameters" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourceTest" name="testGetResourceParameters" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourceChain" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourceChain" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testToString" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetHttpVersion" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetHeaderParameters" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetHeaderParameters" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourceName" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourcePath" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourcePath" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetContent" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetContent" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetMethod" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetContentLength" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourceParameters" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETResourcesTest" name="testGetResourceParameters" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetResourceChain" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetResourceChain" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testToString" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testToString" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetHttpVersion" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetHeaderParameters" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetHeaderParameters" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetResourceName" time="0.0" />
 
@@ -247,7 +242,7 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetContentLength" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetResourceParameters" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestGETParametersTest" name="testGetResourceParameters" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetResourceChain" time="0.0" />
 
@@ -257,7 +252,7 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetHeaderParameters" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetResourceName" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetResourceName" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetResourcePath" time="0.0" />
 
@@ -267,7 +262,7 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetContentLength" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetResourceParameters" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTOneParameterTest" name="testGetResourceParameters" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetResourceChain" time="0.001" />
 
@@ -277,16 +272,11 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetHeaderParameters" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetResourceName" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetResourceName" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetResourcePath" time="0.001">
-          <failure message="array lengths differed, expected.length=1 actual.length=0" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: array lengths differed, expected.length=1 actual.length=0
-	at es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest.testGetResourcePath(HTTPRequestPOSTMultipleParametersTest.java:45)
-</failure>
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetResourcePath" time="0.0" />
 
-      </testcase>
-
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetContent" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetContent" time="0.001" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTMultipleParametersTest" name="testGetMethod" time="0.0" />
 
@@ -302,9 +292,9 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTEncodedTest" name="testGetHeaderParameters" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTEncodedTest" name="testGetResourceName" time="0.0" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTEncodedTest" name="testGetResourceName" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTEncodedTest" name="testGetResourcePath" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTEncodedTest" name="testGetResourcePath" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPRequestPOSTEncodedTest" name="testGetContent" time="0.0" />
 
@@ -316,1859 +306,343 @@
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseNoContentTest" name="testPrint" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseNoContentWithHeadersTest" name="testPrint" time="0.002" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseNoContentWithHeadersTest" name="testPrint" time="0.001" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseTest" name="testPrint" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseTest" name="testPrint" time="0.0" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseWithHeadersTest" name="testPrint" time="0.001" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week1.HTTPResponseWithHeadersTest" name="testPrint" time="0.0" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testPostInvalidContent" time="0.009" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testPost" time="0.006" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testPost" time="0.007" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetInvalidResource" time="0.005" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetInvalidResource" time="0.004" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetInvalidHtmlPage" time="0.003" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetInvalidHtmlPage" time="0.004" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetHtmlList" time="0.004" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetHtmlPage" time="0.019" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testGetHtmlPage" time="0.021" />
 
       <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testDelete" time="0.005" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testDeleteNonexistentPage" time="0.003" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week2.ClientRequetsTest" name="testDeleteNonexistentPage" time="0.004" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[0]" time="0.279" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[0]" time="0.364" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[0]" time="0.012" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[0]" time="0.011" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[1]" time="0.024" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[1]" time="0.101" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[1]" time="0.007" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[1]" time="0.012" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[2]" time="0.02" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[2]" time="0.201" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[2]" time="0.007" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[2]" time="0.02" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[3]" time="0.521" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[3]" time="0.658" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[3]" time="0.006" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[3]" time="0.014" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[4]" time="0.52" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[4]" time="0.097" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[4]" time="0.005" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[4]" time="0.01" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[5]" time="0.019" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[5]" time="0.084" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[5]" time="0.006" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[5]" time="0.009" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[6]" time="0.028" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[6]" time="0.08" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[6]" time="0.005" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[6]" time="0.009" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[7]" time="0.025" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[7]" time="0.083" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[7]" time="0.008" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[7]" time="0.011" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[8]" time="0.023" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[8]" time="0.079" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[8]" time="0.007" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[8]" time="0.011" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[9]" time="0.038" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testMultipleWelcome[9]" time="0.078" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[9]" time="0.012" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.CustomPortTest" name="testWelcome[9]" time="0.009" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testPostInvalidContent" time="0.752" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testPostInvalidContent" time="0.154" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testPost" time="0.127" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testPost" time="0.101" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testGetInvalidHtmlPage" time="0.087" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testGetInvalidHtmlPage" time="0.054" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testGetHtmlList" time="0.091" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testGetHtmlList" time="0.057" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testDelete" time="0.114" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testDelete" time="0.066" />
 
-      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testDeleteNonexistentPage" time="0.088" />
+      <testcase classname="es.uvigo.esei.dai.hybridserver.week3.ClientRequestsWithDatabaseTest" name="testDeleteNonexistentPage" time="0.055" />
 
       <system-out><![CDATA[Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Metiendo post
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Sirviendo indice
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 UUID encontrado
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Tiene UUID seteado
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo sin DB
+Hilo de servicio iniciado. Modo sin DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Metiendo post
 Metido post
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
+Hilo de servicio iniciado. Modo con DB
 Hilo servidor iniciado
 Pool inicializada
-Hilo de servicio iniciado.
-Modo con DB
+Hilo de servicio iniciado. Modo con DB
 ]]></system-out>
 
       <system-err><![CDATA[Error 400
 Error 404
 Error 404
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-nov 06, 2015 1:37:43 PM org.apache.http.impl.execchain.RetryExec execute
-INFORMACIÓN: I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:33217: Software caused connection abort: recv failed
-nov 06, 2015 1:37:43 PM org.apache.http.impl.execchain.RetryExec execute
-INFORMACIÓN: Retrying request to {}->http://localhost:33217
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
-java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2412)
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
-	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at java.sql.DriverManager.getConnection(Unknown Source)
-	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:59)
-	at es.uvigo.esei.dai.hybridserver.week3.CustomPortTest.startServer(CustomPortTest.java:76)
-	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1165)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1016)
+nov 06, 2015 9:57:16 PM org.apache.http.impl.execchain.RetryExec execute
+INFORMACIÓN: I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:10201: Software caused connection abort: recv failed
+nov 06, 2015 9:57:16 PM org.apache.http.impl.execchain.RetryExec execute
+INFORMACIÓN: Retrying request to {}->http://localhost:10201
 [main] WARN org.dbunit.dataset.AbstractTableMetaData - Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'MySQL' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
 [main] WARN org.dbunit.dataset.AbstractTableMetaData - Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'MySQL' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
+nov 06, 2015 9:57:16 PM org.apache.http.impl.execchain.RetryExec execute
+INFORMACIÓN: I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:8888: The target server failed to respond
+nov 06, 2015 9:57:16 PM org.apache.http.impl.execchain.RetryExec execute
+INFORMACIÓN: Retrying request to {}->http://localhost:8888
 [main] WARN org.dbunit.dataset.AbstractTableMetaData - Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'MySQL' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
 Error 404
 [main] WARN org.dbunit.dataset.AbstractTableMetaData - Potential problem found: The configured data type factory 'class org.dbunit.dataset.datatype.DefaultDataTypeFactory' might cause problems with the current database 'MySQL' (e.g. some datatypes may not be supported properly). In rare cases you might see this message because the list of supported database products is incomplete (list=[derby]). If so please request a java-class update via the forums.If you are using your own IDataTypeFactory extending DefaultDataTypeFactory, ensure that you override getValidDbProducts() to specify the supported database products.
