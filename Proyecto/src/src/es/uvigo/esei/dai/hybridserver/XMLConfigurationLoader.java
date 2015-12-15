@@ -35,7 +35,7 @@ public class XMLConfigurationLoader {
 		DocumentBuilder db = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder();
 
-		Document doc = db.parse(new File("test/configuration.xml"));
+		Document doc = db.parse(xmlFile));
 		doc.getDocumentElement().normalize();
 		
 		/* <connections> */
