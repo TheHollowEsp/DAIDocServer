@@ -12,7 +12,7 @@ import java.util.UUID;
 import com.mysql.jdbc.Connection;
 
 public class DBDAO_XML implements BaseDAO {
-	protected final String TABLE_NAME = "HTML";
+	protected final String TABLE_NAME = "XML";
 	protected final String UUID_NAME = "uuid";
 	protected final String CONTENT_NAME = "content";
 	private Connection connection;
@@ -38,7 +38,7 @@ public class DBDAO_XML implements BaseDAO {
 	@Override
 	public boolean exists(String uuid) {
 		boolean estado = true;
-		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM HTML WHERE uuid=?")) {
+		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM XML WHERE uuid=?")) {
 			statement.setString(1, uuid);
 			try (ResultSet result = statement.executeQuery()) {
 				if (result.next()) {
@@ -56,7 +56,7 @@ public class DBDAO_XML implements BaseDAO {
 	@Override
 	public String get(String uuid) throws Exception {
 		// HybridServer d = new HybridServer(proper);
-		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM HTML WHERE uuid=?")) {
+		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM XML WHERE uuid=?")) {
 			statement.setString(1, uuid);
 			try (ResultSet result = statement.executeQuery()) {
 				if (result.next()) {
@@ -74,7 +74,7 @@ public class DBDAO_XML implements BaseDAO {
 		String id;
 
 		try (PreparedStatement statement = connection
-				.prepareStatement("INSERT INTO HTML (uuid,content) VALUES (?, ?)")) {
+				.prepareStatement("INSERT INTO XML (uuid,content) VALUES (?, ?)")) {
 			id = UUID.randomUUID().toString();
 			statement.setString(1, id);
 			statement.setString(2, content);
@@ -90,7 +90,7 @@ public class DBDAO_XML implements BaseDAO {
 
 	@Override
 	public boolean update(String uuid, String content) {
-		try (PreparedStatement statement = connection.prepareStatement("INSERT INTO HTML WHERE uuid=?",
+		try (PreparedStatement statement = connection.prepareStatement("INSERT INTO XML WHERE uuid=?",
 				Statement.RETURN_GENERATED_KEYS)) {
 			statement.setString(2, content);
 			if (statement.executeUpdate() != 1) {
@@ -105,7 +105,7 @@ public class DBDAO_XML implements BaseDAO {
 	@Override
 	public boolean delete(String uuid) {
 		boolean estado = true;
-		try (PreparedStatement statement = connection.prepareStatement("DELETE FROM HTML WHERE uuid=?")) {
+		try (PreparedStatement statement = connection.prepareStatement("DELETE FROM XML WHERE uuid=?")) {
 			try {
 				statement.setString(1, uuid);
 			} catch (NumberFormatException ex) {
@@ -125,7 +125,7 @@ public class DBDAO_XML implements BaseDAO {
 	@Override
 	public Map<String, String> getMapa() {
 		Map<String, String> map = null;
-		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM HTML")) {
+		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM XML")) {
 			try (ResultSet result = statement.executeQuery()) {
 				while (result.next()) {
 					map.put(result.getString("uuid"), result.getString("content"));
@@ -140,8 +140,8 @@ public class DBDAO_XML implements BaseDAO {
 	}
 
 	public List<String> listarContenido() {
-		try (Statement statement = connection.prepareStatement("SELECT * FROM HTML")) {
-			try (ResultSet result = statement.executeQuery("SELECT * FROM HTML")) {
+		try (Statement statement = connection.prepareStatement("SELECT * FROM XML")) {
+			try (ResultSet result = statement.executeQuery("SELECT * FROM XML")) {
 				final List<String> contenido = new ArrayList<>();
 				while (result.next()) {
 					contenido.add(result.getString("content"));
@@ -154,8 +154,8 @@ public class DBDAO_XML implements BaseDAO {
 	}
 
 	public List<String> listarUUID() {
-		try (Statement statement = connection.prepareStatement("SELECT * FROM HTML")) {
-			try (ResultSet result = statement.executeQuery("SELECT * FROM HTML")) {
+		try (Statement statement = connection.prepareStatement("SELECT * FROM XML")) {
+			try (ResultSet result = statement.executeQuery("SELECT * FROM XML")) {
 				final List<String> contenido = new ArrayList<>();
 
 				while (result.next()) {
