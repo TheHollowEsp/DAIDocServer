@@ -16,8 +16,7 @@ import es.uvigo.esei.dai.hybridserver.http.MemoryDAO;
 import es.uvigo.esei.dai.hybridserver.http.ServiceThread;
 
 public class HybridServer {
-	
-	
+
 	// Basico
 	private static int SERVICE_PORT = 80;
 	public static int numClientes = 50;
@@ -28,10 +27,11 @@ public class HybridServer {
 	private HtmlDAO dao;
 	// DB
 	private Properties properties;
-	
+
 	private Connection connection;
 	private boolean usaDB = false;
-	
+	@SuppressWarnings("unused")
+	private Configuration configuration;
 
 	public HybridServer() {
 		// Constructor necesario para los tests de la primera semana
@@ -47,16 +47,21 @@ public class HybridServer {
 		this.properties = properties;
 		SERVICE_PORT = Integer.parseInt(properties.getProperty("port"));
 		numClientes = Integer.parseInt(properties.getProperty("numClients"));
-		
 		usaDB = true;
-		
+
+	}
+
+	public HybridServer(Configuration configuration) {
+		// Constructor necesario para los tests de Configuration
+		this.configuration = configuration;
+		usaDB = true;
 
 	}
 
 	public int getPort() {
 		return SERVICE_PORT;
 	}
-	
+
 	public Connection getConnection() {
 		return this.connection;
 	}
@@ -102,7 +107,7 @@ public class HybridServer {
 	}
 
 	/****** CODIGO DEFAULT *****/
-	
+
 	public void stop() {
 		this.stop = true;
 
@@ -121,7 +126,7 @@ public class HybridServer {
 
 		this.serverThread = null;
 	}
-	
+
 	/****** FIN CODIGO DEFAULT *****/
 
 }
