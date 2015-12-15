@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="HybridServer - Final" default="release">
+	<description>
+		HybridServer - Proyecto para la asignatura Desarrollo de Aplicaciones para Internet
+		Curso 2015/2016 - E.S. Enxeñaría Informática (Universidade de Vigo)
+		Segunda Entrega
+	</description>
+	
+	<!-- Poned el número de grupo correcto en esta propiedad -->
+	<property name="group" value="Grupo.X.Y"/>
+	
+	<property name="report.file" value="test.report"/>
+	<property name="report.dir" location="report"/>
+	<path id="project.classpath">
+		<pathelement location="bin"/>
+		<pathelement location="test_bin"/>
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="test-report">
+		<!--pathconvert property="project.classpath.txt" refid="project.classpath"/>
+		<echo message="${project.classpath.txt}"/-->
+		<junit printsummary="true" haltonfailure="false" haltonerror="false" fork="true">
+			<classpath refid="project.classpath"/>
+			
+			<test name="es.uvigo.esei.dai.hybridserver.HybridServerSecondReleaseTestSuite" 
+				haltonfailure="false" haltonerror="false" outfile="${report.file}">
+				<formatter type="xml"/>
+			</test>
+		</junit>
+		
+		<junitreport>
+			<fileset file="${report.file}.xml"/>
+			<report format="noframes" todir="${report.dir}"/>
+		</junitreport>
+	</target>
+	
+	<target name="clean-test-report">
+		<delete file="${report.file}.xml"/>
+		<delete file="TESTS-TestSuites.xml"/>
+		<delete dir="${report.dir}"/>
+	</target>
+	
+	<target name="check-essential-files">
+		<available classname="es.uvigo.esei.dai.hybridserver.Launcher" property="exists.launcher" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.HybridServer" property="exists.server" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.http.HTTPRequest" property="exists.request" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.http.HTTPResponse" property="exists.response" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.http.HTTPParseException" property="exists.exception" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod" property="exists.request.method" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.http.HTTPResponseStatus" property="exists.response.status" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.Configuration" property="exists.configuration" classpathref="project.classpath"/>
+		<available classname="es.uvigo.esei.dai.hybridserver.XMLConfigurationLoader" property="exists.xmlconfigurationloader" classpathref="project.classpath"/>
+	</target>
+	
+	<target name="check-launcher" unless="exists.launcher" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.Launcher"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-server" unless="exists.server" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.HybridServer"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-request" unless="exists.request" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.http.HTTPRequest"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-response" unless="exists.response" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.http.HTTPResponse"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-request-method" unless="exists.request.method" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-response-status" unless="exists.response.status" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.http.HTTPResponseStatus"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-configuration" unless="exists.configuration" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.Configuration"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-xmlconfigurationloader" unless="exists.xmlconfigurationloader" >
+		<echo message="No se encuentra la clase es.uvigo.esei.dai.hybridserver.XMLConfigurationLoader"/>
+		<echo message="Por favor, comprueba que esta clase existe y que está en el paquete correcto."/>
+	</target>
+	
+	<target name="check-report" depends="check-essential-files, check-launcher, check-server, check-request, check-response, check-request-method, check-response-status, check-configuration, check-xmlconfigurationloader"/>
+	
+	<target name="release" depends="test-report, check-report">
+		<zip destfile="${group}-second.zip">
+			<zipfileset dir="src" prefix="src"/>
+			<zipfileset dir="${report.dir}"/>
+			<zipfileset file="README.md"/>
+		</zip>
+	</target>
+</project>
