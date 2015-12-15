@@ -13,7 +13,7 @@ import com.mysql.jdbc.Connection;
 
 public class ServiceThread implements Runnable {
 	private Socket clientSocket;
-	HtmlDAO dao;
+	BaseDAO dao;
 	Properties props;
 	private boolean usaDB = false;
 	private String dburl = "jdbc:mysql://localhost:3306/hstestdb";
@@ -24,7 +24,7 @@ public class ServiceThread implements Runnable {
 	private Connection connection;
 	
 
-	public ServiceThread(Socket clientSocket, HtmlDAO dao){
+	public ServiceThread(Socket clientSocket, BaseDAO dao){
 		this.clientSocket = clientSocket;
 		this.dao = dao;
 		

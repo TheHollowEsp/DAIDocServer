@@ -3,7 +3,7 @@ package es.uvigo.esei.dai.hybridserver.http;
 import java.util.Map;
 import java.util.UUID;
 
-public class MemoryDAO implements HtmlDAO {
+public class MemoryDAO implements BaseDAO {
 
 	Map<String, String> mapa;
 	String uuid;

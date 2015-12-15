@@ -11,13 +11,13 @@ import java.util.UUID;
 
 import com.mysql.jdbc.Connection;
 
-public class DBDAO implements HtmlDAO {
+public class DBDAO_HTML implements BaseDAO {
 	protected final String TABLE_NAME = "HTML";
 	protected final String UUID_NAME = "uuid";
 	protected final String CONTENT_NAME = "content";
 	private Connection connection;
 
-	public DBDAO(Connection connection) throws SQLException{
+	public DBDAO_HTML(Connection connection) throws SQLException{
 		this.connection = connection;
 	}
 	

@@ -23,11 +23,11 @@ public class HTMLControllerDB {
 	}
 
 	public HTTPResponse processDB(HTTPRequest request) {
-		DBDAO db = null;
+		DBDAO_HTML db = null;
 		resp = new HTTPResponse();
 		resp.setVersion(version);
 		try {
-			db = new DBDAO(connection);
+			db = new DBDAO_HTML(connection);
 		} catch (Exception e1) {
 			e("No se pudo conectar a la DB");
 			e1.printStackTrace();

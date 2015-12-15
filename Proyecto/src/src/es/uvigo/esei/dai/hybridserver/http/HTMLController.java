@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class HTMLController {
-	private HtmlDAO dao;
+	private BaseDAO dao;
 	private HTTPResponse resp;
 	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Pagina principal de Hector y Manu.</p></body></html>";
 	private static final String version = "HTTP/1.1";
@@ -12,7 +12,7 @@ public class HTMLController {
 	String contenido = "";
 	private String uuid;
 
-	public HTMLController(HtmlDAO dao) {
+	public HTMLController(BaseDAO dao) {
 		this.dao = dao;
 
 	}

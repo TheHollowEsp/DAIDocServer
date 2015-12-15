@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 
 import com.mysql.jdbc.Connection;
 
-import es.uvigo.esei.dai.hybridserver.http.HtmlDAO;
+import es.uvigo.esei.dai.hybridserver.http.BaseDAO;
 import es.uvigo.esei.dai.hybridserver.http.MemoryDAO;
 import es.uvigo.esei.dai.hybridserver.http.ServiceThread;
 
@@ -24,7 +24,7 @@ public class HybridServer {
 	private boolean stop;
 	public ExecutorService threadPool;
 	// Mapa
-	private HtmlDAO dao;
+	private BaseDAO dao;
 	// DB
 	private Properties properties;
 
@@ -55,7 +55,25 @@ public class HybridServer {
 		// Constructor necesario para los tests de Configuration
 		this.configuration = configuration;
 		usaDB = true;
+		if (validarConf(configuration)) {
+			SERVICE_PORT = configuration.getHttpPort();
+			numClientes = configuration.getNumClients();
+			this.properties = new Properties();
+			properties.setProperty("port", Integer.toString(configuration.getHttpPort()));
+			properties.setProperty("numClients", Integer.toString(configuration.getNumClients()));
+			properties.setProperty("db.url", configuration.getDbURL());
+			properties.setProperty("db.user", configuration.getDbUser());
+			properties.setProperty("db.password", configuration.getDbPassword());
 
+		} else {
+			System.err.println("El fichero de configuracion no parsea");
+		}
+
+	}
+
+	private boolean validarConf(Configuration configuration) {
+		// TODO: Validar realmente el fichero
+		return true;
 	}
 
 	public int getPort() {

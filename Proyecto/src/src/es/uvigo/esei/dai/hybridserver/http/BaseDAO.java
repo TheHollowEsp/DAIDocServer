@@ -3,7 +3,7 @@ package es.uvigo.esei.dai.hybridserver.http;
 import java.sql.SQLException;
 import java.util.Map;
 
-public interface HtmlDAO {
+public interface BaseDAO {
 
 	public abstract boolean exists(String uuid);
 
