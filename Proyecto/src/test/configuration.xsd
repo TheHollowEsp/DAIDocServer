@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.esei.uvigo.es/dai/hybridserver"
+	xmlns:tns="http://www.esei.uvigo.es/dai/hybridserver"
+	elementFormDefault="qualified"
+>
+	
+	<simpleType name="portNumber">
+		<restriction base="positiveInteger">
+			<maxInclusive value="65535"/>
+		</restriction>
+	</simpleType>
+	
+	<complexType name="connections" mixed="false">
+		<sequence>
+			<element name="http" type="tns:portNumber"/>
+			<element name="webservice" type="string"/>
+			<element name="numClients" type="positiveInteger"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="database" mixed="false">
+		<sequence>
+			<element name="user" type="string"/>
+			<element name="password" type="string"/>
+			<element name="url" type="string"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="server" mixed="false">
+		<attribute name="name" type="string" use="required"/>
+		<attribute name="wsdl" type="string" use="required"/>
+		<attribute name="namespace" type="string" use="required"/>
+		<attribute name="service" type="string" use="required"/>
+		<attribute name="httpAddress" type="string" use="required"/>
+	</complexType>
+	
+	<element name="configuration">
+		<complexType>
+			<sequence>
+				<element name="connections" type="tns:connections"/>
+				<element name="database" type="tns:database"/>
+				<element name="servers">
+					<complexType>
+						<sequence>
+							<element name="server" type="tns:server" minOccurs="0" maxOccurs="unbounded"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
