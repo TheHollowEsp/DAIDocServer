@@ -7,6 +7,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
+// TODO: Permitir launch con un configuration.xml
+// TODO: Validar configuration.xml
+// TODO: Hacerlo con DOM o SAX
+
 
 
 public class Launcher {
