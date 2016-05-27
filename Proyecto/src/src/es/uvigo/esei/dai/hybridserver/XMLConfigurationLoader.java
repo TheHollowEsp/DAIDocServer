@@ -20,7 +20,6 @@ package es.uvigo.esei.dai.hybridserver;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -35,7 +34,7 @@ public class XMLConfigurationLoader {
 		DocumentBuilder db = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder();
 
-		Document doc = db.parse(xmlFile));
+		Document doc = db.parse(xmlFile);
 		doc.getDocumentElement().normalize();
 		
 		/* <connections> */

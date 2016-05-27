@@ -6,7 +6,7 @@ import java.util.UUID;
 public class HTMLController {
 	private BaseDAO dao;
 	private HTTPResponse resp;
-	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Pagina principal de Hector y Manu.</p></body></html>";
+	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><h2>Página principal de Hector y Manu.</h2><p> Opciones disponibles: </p><ul><li><a href='html'>Documentos HTML</a></li><li><a href='xml'>Documentos XML</a></li><li><a href='xsd'>Documentos XSD</a></li><li><a href='xslt'>Documentos XSLT</a></li></ul></body></html>";
 	private static final String version = "HTTP/1.1";
 	String extension = "";
 	String contenido = "";
