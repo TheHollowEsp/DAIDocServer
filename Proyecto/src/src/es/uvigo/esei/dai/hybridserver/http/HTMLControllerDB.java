@@ -9,7 +9,7 @@ import com.mysql.jdbc.Connection;
 public class HTMLControllerDB {
 	private HTTPResponse resp;
 	private static final String version = "HTTP/1.1";
-	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><p>Pagina principal de Hector y Manu.</p><a href=\"/html\">Indice</a></body></html>";
+	public static final String WEB_PAGE = "<html><body><h1>Hybrid Server</h1><h2>P&aacutegina principal de Hector y Manu.</h2><p> Opciones disponibles: </p><ul><li><a href='html'>Documentos HTML</a></li><li><a href='xml'>Documentos XML</a></li><li><a href='xsd'>Documentos XSD</a></li><li><a href='xslt'>Documentos XSLT</a></li></ul></body></html>";
 	String extension = "";
 	String content = "";
 	private Connection connection;
@@ -107,7 +107,7 @@ public class HTMLControllerDB {
 				HTTPResponseStatus status = HTTPResponseStatus.S200;
 				resp.setStatus(status);
 				content = "<html><body>";
-				content += "<h1>&Iacutendice</h1>";
+				content += "<h1>&Iacutendice XML</h1>";
 				String form = "<form action=\"http://localhost/xml\" method=\"POST\"><textarea name=\"xml\" required></textarea><button type=\"submit\">Postear</button></form>";
 				content += form;
 				List<String> listid = db.listarUUID();
@@ -123,7 +123,7 @@ public class HTMLControllerDB {
 
 				content += "</body></html>";
 				resp.setContent(content);
-			} else if (request.getResourceChain().contains("/xml?uuid=")) {	// TODO: GET uuid de tabla xml
+			} else if (request.getResourceChain().contains("/xml?uuid=")) {	//TODO: Validar el XML en caso de que tenga un XSLT
 				DBDAO_XML db = null;
 				try {
 					db = new DBDAO_XML(connection);
@@ -166,7 +166,7 @@ public class HTMLControllerDB {
 				HTTPResponseStatus status = HTTPResponseStatus.S200;
 				resp.setStatus(status);
 				content = "<html><body>";
-				content += "<h1>&Iacutendice</h1>";
+				content += "<h1>&Iacutendice XSD</h1>";
 				String form = "<form action=\"http://localhost/xsd\" method=\"POST\"><textarea name=\"xsd\" required></textarea><button type=\"submit\">Postear</button></form>";
 				content += form;
 				List<String> listid = db.listarUUID();
@@ -225,8 +225,8 @@ public class HTMLControllerDB {
 				HTTPResponseStatus status = HTTPResponseStatus.S200;
 				resp.setStatus(status);
 				content = "<html><body>";
-				content += "<h1>&Iacutendice</h1>";
-				String form = "<form action=\"http://localhost/xslt\" method=\"POST\"><textarea name=\"xslt\" required></textarea><button type=\"submit\">Postear</button></form>";
+				content += "<h1>&Iacutendice XSLT</h1>";
+				String form = "<form action=\"http://localhost/xslt\" method=\"POST\"><textarea name=\"xslt\" required></textarea></br><p>XSD relacionado</p><input type=\"text\" name=\"xsdrel\"></input><button type=\"submit\">Postear</button></form>";
 				content += form;
 				List<String> listid = db.listarUUID();
 				if (!listid.isEmpty()) {
@@ -315,12 +315,108 @@ public class HTMLControllerDB {
 					return resp;
 				}
 
-			} else if (request.getResourceParameters().get("xml") != null) {
-			} else if (request.getResourceParameters().get("xsd") != null) {
-			} else if (request.getResourceParameters().get("xslt") != null) {
+			} else if (request.getResourceParameters().get("xml") != null) { // POST de XML				
+				DBDAO_XML db = null;
+				try {
+					db = new DBDAO_XML(connection);
+				} catch (Exception e1) {
+					e("No se pudo conectar a la DB");
+					e1.printStackTrace();
+					resp.setStatus(HTTPResponseStatus.S500);
+					resp.setContent("Error 500 - No se pudo conectar a la DB");
+					return resp;
+				}
+				p("Metiendo XML");
 
+				String contenido = request.getResourceParameters().get("xml");
+				String uuid = null;
+				try {
+					uuid = db.create(contenido);
+				} catch (SQLException e) {
+					e("Error metiendo XML");
+					e(e.getMessage());
+				}
+				p("Metido post");
+				HTTPResponseStatus status = HTTPResponseStatus.S200;
+				resp.setStatus(status);
+				String content = "<html><body><h1>P&aacutegina insertada:</h1><a href=\"xml?uuid=" + uuid + "\">" + uuid
+						+ "</a></body></html>";
+				resp.setContent(content);
+				return resp;
+			
+			} else if (request.getResourceParameters().get("xsd") != null) {// POST de XSD				
+				DBDAO_XSD db = null;
+				try {
+					db = new DBDAO_XSD(connection);
+				} catch (Exception e1) {
+					e("No se pudo conectar a la DB");
+					e1.printStackTrace();
+					resp.setStatus(HTTPResponseStatus.S500);
+					resp.setContent("Error 500 - No se pudo conectar a la DB");
+					return resp;
+				}
+				p("Metiendo XSD");
+				String contenido = request.getResourceParameters().get("xsd");
+				String uuid = null;
+				try {
+					uuid = db.create(contenido);
+				} catch (SQLException e) {
+					e("Error metiendo XSD");
+					e(e.getMessage());
+				}
+				p("Metido post");
+				HTTPResponseStatus status = HTTPResponseStatus.S200;
+				resp.setStatus(status);
+				String content = "<html><body><h1>P&aacutegina insertada:</h1><a href=\"xsd?uuid=" + uuid + "\">" + uuid
+						+ "</a></body></html>";
+				resp.setContent(content);
+				return resp;
+				
+			} else if (request.getResourceParameters().get("xslt") != null) {// POST de XSLT
+				DBDAO_XSLT db = null;
+				DBDAO_XSD db2 = null;
+				try {
+					db = new DBDAO_XSLT(connection);
+					db2 = new DBDAO_XSD(connection);
+				} catch (Exception e1) {
+					e("No se pudo conectar a la DB");
+					e1.printStackTrace();
+					resp.setStatus(HTTPResponseStatus.S500);
+					resp.setContent("Error 500 - No se pudo conectar a la DB");
+					return resp;
+				}
+				p("Metiendo XSLT");
+				String contenido = request.getResourceParameters().get("xslt");
+				String xsdrel = request.getResourceParameters().get("xsdrel");
+				if (xsdrel != ""){ // Si hay un XSD escrito
+					boolean cond = db2.exists(xsdrel);					
+					if (cond){ // Si existe el XSD relacionado
+						String uuid = null;
+						try {
+							uuid = db.create(contenido,xsdrel);
+						} catch (SQLException e) {
+							e("Error metiendo XSLT");
+							e(e.getMessage());
+						}
+						p("Metido post");
+						HTTPResponseStatus status = HTTPResponseStatus.S200;
+						resp.setStatus(status);
+						String content = "<html><body><h1>P&aacutegina insertada:</h1><a href=\"xslt?uuid=" + uuid + "\">" + uuid
+								+ "</a></body></html>";
+						resp.setContent(content);
+						return resp;
+					} else { // Si el XSD relacionado no existe 404 Not Found
+						resp.setStatus(HTTPResponseStatus.S404);
+						resp.setContent("Error 404: El XSD que indicaste no existe.");
+						return resp;
+					}
+				} else { // Si no hay un uuid de XSD 400 Bad Request
+					resp.setStatus(HTTPResponseStatus.S400);
+					resp.setContent("Error 400: Debes indicar un XSD.");
+					return resp;
+				}
 			} else {
-				resp.setStatus(HTTPResponseStatus.S400);
+				resp.setStatus(HTTPResponseStatus.S500);
 				return resp;
 			}
 
@@ -348,9 +444,77 @@ public class HTMLControllerDB {
 					resp.setStatus(HTTPResponseStatus.S404);
 					return resp;
 				}
-				// Peticion con uuid
-				// uuid existe -> Borrar
-				// uuid no existe -> error 404
+				
+			
+			} else if (request.getResourceChain().contains("/xml?uuid=")){
+				DBDAO_XML db = null;
+				try {
+					db = new DBDAO_XML(connection);
+				} catch (Exception e1) {
+					e("No se pudo conectar a la DB");
+					e1.printStackTrace();
+					resp.setStatus(HTTPResponseStatus.S500);
+					resp.setContent("Error 500 - No se pudo conectar a la DB");
+					return resp;
+				}
+				String[] key = request.getResourceChain().split("=");
+				if (db.exists(key[1])) {
+					boolean estado = db.delete(key[1]);
+					resp.setStatus(HTTPResponseStatus.S200);
+					resp.setContent("<html><body><h1>Petición DELETE aceptada</h1><p>Borrado de pagina " + key[1]
+							+ " con estado " + estado + "</p></body></html>");
+					return resp;
+				} else {
+					resp.setContent("Error 404 - uuid no encontrada");
+					resp.setStatus(HTTPResponseStatus.S404);
+					return resp;
+				}
+			} else if (request.getResourceChain().contains("/xsd?uuid=")){
+				DBDAO_XSD db = null;
+				try {
+					db = new DBDAO_XSD(connection);
+				} catch (Exception e1) {
+					e("No se pudo conectar a la DB");
+					e1.printStackTrace();
+					resp.setStatus(HTTPResponseStatus.S500);
+					resp.setContent("Error 500 - No se pudo conectar a la DB");
+					return resp;
+				}
+				String[] key = request.getResourceChain().split("=");
+				if (db.exists(key[1])) {
+					boolean estado = db.delete(key[1]);
+					resp.setStatus(HTTPResponseStatus.S200);
+					resp.setContent("<html><body><h1>Petición DELETE aceptada</h1><p>Borrado de pagina " + key[1]
+							+ " con estado " + estado + "</p></body></html>");
+					return resp;
+				} else {
+					resp.setContent("Error 404 - uuid no encontrada");
+					resp.setStatus(HTTPResponseStatus.S404);
+					return resp;
+				}
+			} else if (request.getResourceChain().contains("/xslt?uuid=")){
+				DBDAO_XSLT db = null;
+				try {
+					db = new DBDAO_XSLT(connection);
+				} catch (Exception e1) {
+					e("No se pudo conectar a la DB");
+					e1.printStackTrace();
+					resp.setStatus(HTTPResponseStatus.S500);
+					resp.setContent("Error 500 - No se pudo conectar a la DB");
+					return resp;
+				}
+				String[] key = request.getResourceChain().split("=");
+				if (db.exists(key[1])) {
+					boolean estado = db.delete(key[1]);
+					resp.setStatus(HTTPResponseStatus.S200);
+					resp.setContent("<html><body><h1>Petición DELETE aceptada</h1><p>Borrado de pagina " + key[1]
+							+ " con estado " + estado + "</p></body></html>");
+					return resp;
+				} else {
+					resp.setContent("Error 404 - uuid no encontrada");
+					resp.setStatus(HTTPResponseStatus.S404);
+					return resp;
+				}
 			} else {
 				resp.setContent("Error 400");
 				resp.setStatus(HTTPResponseStatus.S400);
