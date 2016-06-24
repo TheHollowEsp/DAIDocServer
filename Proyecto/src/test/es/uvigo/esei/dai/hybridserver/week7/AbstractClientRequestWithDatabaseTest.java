@@ -86,7 +86,7 @@ extends JdbcTestCase {
 		}
 	}
 
-	@Test(timeout = 1000)
+	@Test(timeout = 20000)
 	public void testGet() throws IOException {
 		final String pageURL = url + getResourceName();
 		

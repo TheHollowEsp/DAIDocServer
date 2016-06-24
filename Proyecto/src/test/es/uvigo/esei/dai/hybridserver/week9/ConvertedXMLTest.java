@@ -99,7 +99,7 @@ extends JdbcTestCase {
 		}
 	}
 
-	@Test(timeout = 1000)
+	@Test(timeout = 30000)
 	public void testConvertedGet() throws IOException {
 		final String pageURL = url + "/xml";
 		

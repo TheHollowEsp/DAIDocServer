@@ -1,8 +1,25 @@
 package es.uvigo.esei.dai.hybridserver.http;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.StringReader;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
+
+import javax.xml.XMLConstants;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+
+import org.xml.sax.HandlerBase;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
+import org.xml.sax.helpers.DefaultHandler;
 
 import com.mysql.jdbc.Connection;
 
@@ -86,6 +103,7 @@ public class HTMLControllerDB {
 						e(e.getMessage());
 					}
 					resp.setContent(content);
+					resp.setContentType("text/html");
 					resp.setStatus(HTTPResponseStatus.S200);
 				} else {
 					// uuid no existe -> error 404
@@ -114,8 +132,8 @@ public class HTMLControllerDB {
 				if (!listid.isEmpty()) {
 					for (String currentKey : listid) {
 						content += "<li>";
-						content += "<a href=\"http://127.0.0.1:" + props.get("port") + "/xml?uuid=" + currentKey
-								+ "\">" + currentKey + "</a>";
+						content += "<a href=\"http://127.0.0.1:" + props.get("port") + "/xml?uuid=" + currentKey + "\">"
+								+ currentKey + "</a>";
 						content += "</li>";
 					}
 				} else
@@ -123,34 +141,115 @@ public class HTMLControllerDB {
 
 				content += "</body></html>";
 				resp.setContent(content);
-			} else if (request.getResourceChain().contains("/xml?uuid=")) {	//TODO: Validar el XML en caso de que tenga un XSLT
+			} else if (request.getResourceChain().contains("/xml?uuid=")) {
+
 				DBDAO_XML db = null;
-				try {
-					db = new DBDAO_XML(connection);
-				} catch (Exception e1) {
-					e("No se pudo conectar a la DB");
-					e1.printStackTrace();
-					resp.setStatus(HTTPResponseStatus.S500);
-					resp.setContent("Error 500 - No se pudo conectar a la DB");
-					return resp;
-				}
-				String uuid = request.getResourceParameters().get("uuid");
-				boolean cond = db.exists(uuid);
-				if (cond) {
-					// uuid existe -> Mostrar
+
+				if (request.getResourceParameters().get("xslt") != null) {
+					DBDAO_XSLT db2 = null;
+					DBDAO_XSD db3 = null;
+					String uuidXSLT = request.getResourceParameters().get("xslt");
 					try {
-						content = db.get(uuid);
-					} catch (Exception e) {
-						e("Error obteniendo pagina de DB");
-						e(e.getMessage());
+						db = new DBDAO_XML(connection);
+						db2 = new DBDAO_XSLT(connection);
+						db3 = new DBDAO_XSD(connection);
+					} catch (Exception e1) {
+						e("No se pudo conectar a la DB");
+						e1.printStackTrace();
+						resp.setStatus(HTTPResponseStatus.S500);
+						resp.setContent("Error 500 - No se pudo conectar a la DB");
+						return resp;
 					}
-					resp.setContent(content);
-					resp.setStatus(HTTPResponseStatus.S200);
+					String uuid = request.getResourceParameters().get("uuid");
+					boolean condXML = db.exists(uuid);
+					boolean condXSLT = db2.exists(uuidXSLT); // Invalido = 400,
+																// inexistente =
+																// 404
+					if (condXML) {
+						if (condXSLT) {
+							try {
+								String uuidXSD = db2.getXSD(uuidXSLT);
+							} catch (Exception e1) {
+								e("Error obteniendo XSD asociado de DB");
+								e(e1.getMessage());
+							}
+							String xsd = null;
+							String xml = null;
+							try {
+								xsd = db3.get(uuid);
+								xml = db.get(uuid);
+							} catch (Exception e) {
+								e("Error obteniendo pagina de DB");
+								e(e.getMessage());
+							}
+
+							try {
+								// saxParser
+								SchemaFactory schemaFactory = SchemaFactory
+										.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+								Schema schema;
+								schema = schemaFactory.newSchema(new StreamSource(new StringReader(xsd)));
+
+								SAXParserFactory saxFactory = SAXParserFactory.newInstance();
+								saxFactory.setSchema(schema);
+								SAXParser parser = saxFactory.newSAXParser();
+								parser.parse(new InputSource(new StringReader(xml)), new DefaultHandler());
+
+							} catch (SAXException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (ParserConfigurationException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+
+							resp.setContent(content);
+							resp.setContentType("application/xml");
+							resp.setStatus(HTTPResponseStatus.S200);
+						} else {
+							// uuid no existe -> error 404
+							e("Error 404 - XSLT no existente");
+							resp.setContent("Error 404 - No existe ese XSLT");
+							resp.setStatus(HTTPResponseStatus.S404);
+						}
+					} else {
+						// uuid no existe -> error 404
+						e("Error 404");
+						resp.setContent("Error 404 - No existe esa pagina");
+						resp.setStatus(HTTPResponseStatus.S404);
+					}
 				} else {
-					// uuid no existe -> error 404
-					e("Error 404");
-					resp.setContent("Error 404 - No existe esa pagina");
-					resp.setStatus(HTTPResponseStatus.S404);
+					try {
+						db = new DBDAO_XML(connection);
+					} catch (Exception e1) {
+						e("No se pudo conectar a la DB");
+						e1.printStackTrace();
+						resp.setStatus(HTTPResponseStatus.S500);
+						resp.setContent("Error 500 - No se pudo conectar a la DB");
+						return resp;
+					}
+					String uuid = request.getResourceParameters().get("uuid");
+					boolean cond = db.exists(uuid);
+					if (cond) {
+						// uuid existe -> Mostrar
+						try {
+							content = db.get(uuid);
+						} catch (Exception e) {
+							e("Error obteniendo pagina de DB");
+							e(e.getMessage());
+						}
+						resp.setContent(content);
+						resp.setContentType("application/xml");
+						resp.setStatus(HTTPResponseStatus.S200);
+					} else {
+						// uuid no existe -> error 404
+						e("Error 404");
+						resp.setContent("Error 404 - No existe esa pagina");
+						resp.setStatus(HTTPResponseStatus.S404);
+					}
 				}
 			} else if (request.getResourceChain().equals("/xsd")) {
 				DBDAO_XSD db = null;
@@ -173,8 +272,8 @@ public class HTMLControllerDB {
 				if (!listid.isEmpty()) {
 					for (String currentKey : listid) {
 						content += "<li>";
-						content += "<a href=\"http://127.0.0.1:" + props.get("port") + "/xsd?uuid=" + currentKey
-								+ "\">" + currentKey + "</a>";
+						content += "<a href=\"http://127.0.0.1:" + props.get("port") + "/xsd?uuid=" + currentKey + "\">"
+								+ currentKey + "</a>";
 						content += "</li>";
 					}
 				} else
@@ -204,6 +303,7 @@ public class HTMLControllerDB {
 						e(e.getMessage());
 					}
 					resp.setContent(content);
+					resp.setContentType("application/xml");
 					resp.setStatus(HTTPResponseStatus.S200);
 				} else {
 					// uuid no existe -> error 404
@@ -226,7 +326,7 @@ public class HTMLControllerDB {
 				resp.setStatus(status);
 				content = "<html><body>";
 				content += "<h1>&Iacutendice XSLT</h1>";
-				String form = "<form action=\"http://localhost/xslt\" method=\"POST\"><textarea name=\"xslt\" required></textarea></br><p>XSD relacionado</p><input type=\"text\" name=\"xsdrel\"></input><button type=\"submit\">Postear</button></form>";
+				String form = "<form action=\"http://localhost/xslt\" method=\"POST\"><textarea name=\"xslt\" required></textarea></br><p>XSD relacionado</p><input type=\"text\" name=\"xsd\"></input><button type=\"submit\">Postear</button></form>";
 				content += form;
 				List<String> listid = db.listarUUID();
 				if (!listid.isEmpty()) {
@@ -263,6 +363,7 @@ public class HTMLControllerDB {
 						e(e.getMessage());
 					}
 					resp.setContent(content);
+					resp.setContentType("application/xml");
 					resp.setStatus(HTTPResponseStatus.S200);
 				} else {
 					// uuid no existe -> error 404
@@ -276,11 +377,7 @@ public class HTMLControllerDB {
 				resp.setStatus(HTTPResponseStatus.S400);
 			}
 		} else if (request.getMethod() == HTTPRequestMethod.POST) {// POST
-
-			// Peticion sin campo "html" -> error 400
-			// Peticion con campo "html"
-
-			if (!request.getTodo().contains("xxx") && (request.getResourceParameters().get("html") != null)) {
+			if ((request.getResourceParameters().get("html") != null)) {
 				DBDAO_HTML db = null;
 				try {
 					db = new DBDAO_HTML(connection);
@@ -291,7 +388,7 @@ public class HTMLControllerDB {
 					resp.setContent("Error 500 - No se pudo conectar a la DB");
 					return resp;
 				}
-				// Si no hay porno y
+
 				if (request.getResourceParameters().get("uuid") != null) {
 					// Peticion con uuid -> Actualizar post
 				} else {
@@ -315,7 +412,9 @@ public class HTMLControllerDB {
 					return resp;
 				}
 
-			} else if (request.getResourceParameters().get("xml") != null) { // POST de XML				
+			} else if (request.getResourceParameters().get("xml") != null) { // POST
+																				// de
+																				// XML
 				DBDAO_XML db = null;
 				try {
 					db = new DBDAO_XML(connection);
@@ -343,8 +442,8 @@ public class HTMLControllerDB {
 						+ "</a></body></html>";
 				resp.setContent(content);
 				return resp;
-			
-			} else if (request.getResourceParameters().get("xsd") != null) {// POST de XSD				
+
+			} else if (request.getResourceName().equals("xsd")) {// POST de XSD
 				DBDAO_XSD db = null;
 				try {
 					db = new DBDAO_XSD(connection);
@@ -371,8 +470,9 @@ public class HTMLControllerDB {
 						+ "</a></body></html>";
 				resp.setContent(content);
 				return resp;
-				
-			} else if (request.getResourceParameters().get("xslt") != null) {// POST de XSLT
+
+			} else if (request.getResourceName().equals("xslt")) {// POST de
+																	// XSLT
 				DBDAO_XSLT db = null;
 				DBDAO_XSD db2 = null;
 				try {
@@ -387,13 +487,13 @@ public class HTMLControllerDB {
 				}
 				p("Metiendo XSLT");
 				String contenido = request.getResourceParameters().get("xslt");
-				String xsdrel = request.getResourceParameters().get("xsdrel");
-				if (xsdrel != ""){ // Si hay un XSD escrito
-					boolean cond = db2.exists(xsdrel);					
-					if (cond){ // Si existe el XSD relacionado
+				String xsdrel = request.getResourceParameters().get("xsd");
+				if (xsdrel != null) { // Si hay un XSD escrito
+					boolean cond = db2.exists(xsdrel);
+					if (cond) { // Si existe el XSD relacionado
 						String uuid = null;
 						try {
-							uuid = db.create(contenido,xsdrel);
+							uuid = db.create(contenido, xsdrel);
 						} catch (SQLException e) {
 							e("Error metiendo XSLT");
 							e(e.getMessage());
@@ -401,8 +501,8 @@ public class HTMLControllerDB {
 						p("Metido post");
 						HTTPResponseStatus status = HTTPResponseStatus.S200;
 						resp.setStatus(status);
-						String content = "<html><body><h1>P&aacutegina insertada:</h1><a href=\"xslt?uuid=" + uuid + "\">" + uuid
-								+ "</a></body></html>";
+						String content = "<html><body><h1>P&aacutegina insertada:</h1><a href=\"xslt?uuid=" + uuid
+								+ "\">" + uuid + "</a></body></html>";
 						resp.setContent(content);
 						return resp;
 					} else { // Si el XSD relacionado no existe 404 Not Found
@@ -416,7 +516,7 @@ public class HTMLControllerDB {
 					return resp;
 				}
 			} else {
-				resp.setStatus(HTTPResponseStatus.S500);
+				resp.setStatus(HTTPResponseStatus.S400);
 				return resp;
 			}
 
@@ -444,9 +544,8 @@ public class HTMLControllerDB {
 					resp.setStatus(HTTPResponseStatus.S404);
 					return resp;
 				}
-				
-			
-			} else if (request.getResourceChain().contains("/xml?uuid=")){
+
+			} else if (request.getResourceChain().contains("/xml?uuid=")) {
 				DBDAO_XML db = null;
 				try {
 					db = new DBDAO_XML(connection);
@@ -469,7 +568,7 @@ public class HTMLControllerDB {
 					resp.setStatus(HTTPResponseStatus.S404);
 					return resp;
 				}
-			} else if (request.getResourceChain().contains("/xsd?uuid=")){
+			} else if (request.getResourceChain().contains("/xsd?uuid=")) {
 				DBDAO_XSD db = null;
 				try {
 					db = new DBDAO_XSD(connection);
@@ -492,7 +591,7 @@ public class HTMLControllerDB {
 					resp.setStatus(HTTPResponseStatus.S404);
 					return resp;
 				}
-			} else if (request.getResourceChain().contains("/xslt?uuid=")){
+			} else if (request.getResourceChain().contains("/xslt?uuid=")) {
 				DBDAO_XSLT db = null;
 				try {
 					db = new DBDAO_XSLT(connection);

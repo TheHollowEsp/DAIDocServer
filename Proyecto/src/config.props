@@ -1,4 +1,4 @@
-numClients=50
+numClients=300
 port=80
 db.url=jdbc:mysql://localhost:3306/hstestdb
 db.user=hsdb

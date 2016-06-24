@@ -16,14 +16,13 @@ public class DBDAO_XSLT implements BaseDAO {
 	protected final String UUID_NAME = "uuid";
 	protected final String CONTENT_NAME = "content";
 	protected final String SCHEMA_NAME = "xsd";
-	
 
 	private Connection connection;
 
-	public DBDAO_XSLT(Connection connection) throws SQLException{
+	public DBDAO_XSLT(Connection connection) throws SQLException {
 		this.connection = connection;
 	}
-	
+
 	protected String getTableName() {
 		return TABLE_NAME;
 	}
@@ -31,15 +30,14 @@ public class DBDAO_XSLT implements BaseDAO {
 	protected String getUUIDName() {
 		return UUID_NAME;
 	}
-	
+
 	protected String getContentName() {
 		return CONTENT_NAME;
 	}
+
 	public String getSchemaName() {
 		return SCHEMA_NAME;
 	}
-
-	
 
 	@Override
 	public boolean exists(String uuid) {
@@ -57,6 +55,22 @@ public class DBDAO_XSLT implements BaseDAO {
 			e.printStackTrace();
 		}
 		return estado;
+	}
+
+	public String getXSD(String uuid) throws Exception {
+		// HybridServer d = new HybridServer(proper);
+		try (PreparedStatement statement = connection.prepareStatement("SELECT * FROM XSLT WHERE uuid=?")) {
+			statement.setString(1, uuid);
+			try (ResultSet result = statement.executeQuery()) {
+				if (result.next()) {
+					return result.getString("xsd");
+				} else {
+					throw new Exception("No existe el elemento solicitado en la base de datos.");
+				}
+			}
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	@Override
@@ -79,7 +93,8 @@ public class DBDAO_XSLT implements BaseDAO {
 	public String create(String content, String xsd) throws SQLException {
 		String id;
 
-		try (PreparedStatement statement = connection.prepareStatement("INSERT INTO XSLT (uuid,content,xsd) VALUES (?, ?, ?)")) {
+		try (PreparedStatement statement = connection
+				.prepareStatement("INSERT INTO XSLT (uuid,content,xsd) VALUES (?, ?, ?)")) {
 			id = UUID.randomUUID().toString();
 			statement.setString(1, id);
 			statement.setString(2, content);
@@ -93,16 +108,17 @@ public class DBDAO_XSLT implements BaseDAO {
 		}
 		return id;
 	}
-	
+
 	@Override
 	public String create(String content) throws SQLException {
 		System.err.println("Intento de creacion de XSLT sin XSD");
 		return null;
 	}
-	
+
 	// Contemplamos que se pueda hacer un update con xsd nuevo (este metodo)
 	public boolean update(String uuid, String content, String xsd) {
-		try (PreparedStatement statement = connection.prepareStatement("INSERT INTO XSLT WHERE uuid=?",Statement.RETURN_GENERATED_KEYS)) {
+		try (PreparedStatement statement = connection.prepareStatement("INSERT INTO XSLT WHERE uuid=?",
+				Statement.RETURN_GENERATED_KEYS)) {
 			statement.setString(2, content);
 			statement.setString(3, xsd);
 			if (statement.executeUpdate() != 1) {
@@ -113,7 +129,7 @@ public class DBDAO_XSLT implements BaseDAO {
 		}
 		return true;
 	}
-	
+
 	// Contemplamos que se pueda hacer un update sin xsd nuevo (este metodo)
 	@Override
 	public boolean update(String uuid, String content) {
@@ -195,7 +211,4 @@ public class DBDAO_XSLT implements BaseDAO {
 		}
 	}
 
-	
-
-	
 }

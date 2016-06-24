@@ -28,7 +28,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	Week3TestSuite.class,
 	Week7TestSuite.class,
 	Week9TestSuite.class,
-	Week11TestSuite.class
+//	Week11TestSuite.class
 })
 public class HybridServerSecondReleaseTestSuite {
 }

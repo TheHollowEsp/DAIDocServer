@@ -17,13 +17,15 @@ import java.util.List;
 import java.util.Map;
 
 public class HTTPResponse {
-	
+
 	private HTTPResponse response;
-	private HTTPResponseStatus status; 					//1 Estado
-	private String version;								//2 Versión
-	private String content;								//3 Contenido
-	private LinkedHashMap<String, String> parameters;	//4 Parámetros de cabecera
-	
+	private HTTPResponseStatus status; // 1 Estado
+	private String version; // 2 Versión
+	private String content; // 3 Contenido
+	private String contentType;
+	private LinkedHashMap<String, String> parameters; // 4 Parámetros de
+														// cabecera
+
 	public HTTPResponse() {
 		parameters = new LinkedHashMap<String, String>();
 	}
@@ -55,13 +57,14 @@ public class HTTPResponse {
 	public Map<String, String> getParameters() {
 		return parameters;
 	}
-	
+
 	public String putParameter(String name, String value) {
-		parameters.put(name,value);
+		parameters.put(name, value);
 		return name;
 	}
 
-	public boolean containsParameter(String name) {			// Si LA PETICION contiene el parametro
+	public boolean containsParameter(String name) { // Si LA PETICION contiene
+													// el parametro
 		if (response.listParameters().contains(name)) {
 			return true;
 		} else
@@ -71,8 +74,8 @@ public class HTTPResponse {
 	public String removeParameter(String name) {
 		String aux = "";
 		if (response.listParameters().contains(name)) { // Si existe
-			aux = response.getParameters().get(name);	
-			response.getParameters().remove(name);		// Lo borramos
+			aux = response.getParameters().get(name);
+			response.getParameters().remove(name); // Lo borramos
 		} else {
 			System.out.println("no se ha encontrado ningun parametro con esa clave");
 		}
@@ -91,21 +94,27 @@ public class HTTPResponse {
 		return listaParametros;
 	}
 
-	public void print(Writer writer) throws IOException { 		// Printea la respuesta
+	public void print(Writer writer) throws IOException { // Printea la
+															// respuesta
 		PrintWriter salida = new PrintWriter(writer);
-		salida.print(version + " " + status.getCode() + " " + status.getStatus()); 	// VERSION CODE STATUS
+		salida.print(version + " " + status.getCode() + " " + status.getStatus()); // VERSION
+																					// CODE
+																					// STATUS
 
-		for (final String header : parameters.keySet()) { 							// Parametros
+		for (final String header : parameters.keySet()) { // Parametros
 			salida.write(header + ": " + parameters.get(header));
 			salida.println();
 		}
 
-		if (content != null) {														// Con contenido
+		if (content != null) { // Con contenido
 			salida.println();
+			if (contentType != null) {
+				salida.println("Content-Type: " + contentType);
+			}
 			salida.println("Content-Length: " + content.length());
 			salida.println();
 			salida.write(content.toCharArray());
-		} else {																	// Sin contenido
+		} else { // Sin contenido
 			salida.println();
 			salida.println();
 		}
@@ -123,5 +132,13 @@ public class HTTPResponse {
 		}
 
 		return writer.toString();
+	}
+
+	public String getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
 	}
 }

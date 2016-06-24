@@ -18,8 +18,7 @@ public class Launcher {
 		HybridServer HY = null;
 		/* Borrar antes de entrega */
 		Map<String, String> pages = new LinkedHashMap<String, String>();
-		pages.put("1234", "<html><h1> Hello 1234 </h1></html>");
-		pages.put("1235", "<html><h1> Hello 1235 </h1></html>");
+		
 		
 
 		if (args.length > 0) { // Con Properties

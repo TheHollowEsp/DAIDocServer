@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS `hstestdb`.`XML`;
 DROP TABLE IF EXISTS `hstestdb`.`XSLT`;
 DROP TABLE IF EXISTS `hstestdb`.`XSD`;
 
+GRANT ALL ON `hstestdb`.* to 'dai' identified by 'daipassword';
 GRANT ALL ON `hstestdb`.* to 'hsdb' identified by 'hsdbpass';
 
 CREATE TABLE `hstestdb`.`HTML` (
