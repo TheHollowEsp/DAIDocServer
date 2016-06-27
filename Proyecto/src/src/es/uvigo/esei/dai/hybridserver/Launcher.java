@@ -22,7 +22,7 @@ public class Launcher {
 			if (args[0].contains("xml")) {
 				Configuration conf = null;
 				XMLConfigurationLoader xmlConfiguration = new XMLConfigurationLoader();
-				File file = new File("configuration.xml");
+				File file = new File(args[0]);
 				try {
 					conf = xmlConfiguration.load(file);
 				} catch (Exception e) {
