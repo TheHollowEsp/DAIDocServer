@@ -1,8 +1,8 @@
 package es.uvigo.esei.dai.hybridserver.http;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
+import java.io.StringWriter;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
@@ -11,11 +11,15 @@ import javax.xml.XMLConstants;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import org.xml.sax.HandlerBase;
+import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
@@ -145,6 +149,7 @@ public class HTMLControllerDB {
 
 				DBDAO_XML db = null;
 
+				// Si se adjunta un uuid XSLT
 				if (request.getResourceParameters().get("xslt") != null) {
 					DBDAO_XSLT db2 = null;
 					DBDAO_XSD db3 = null;
@@ -163,12 +168,11 @@ public class HTMLControllerDB {
 					String uuid = request.getResourceParameters().get("uuid");
 					boolean condXML = db.exists(uuid);
 					boolean condXSLT = db2.exists(uuidXSLT); // Invalido = 400,
-																// inexistente =
-																// 404
+					String uuidXSD = null;
 					if (condXML) {
 						if (condXSLT) {
 							try {
-								String uuidXSD = db2.getXSD(uuidXSLT);
+								uuidXSD = db2.getXSD(uuidXSLT);
 							} catch (Exception e1) {
 								e("Error obteniendo XSD asociado de DB");
 								e(e1.getMessage());
@@ -176,38 +180,89 @@ public class HTMLControllerDB {
 							String xsd = null;
 							String xml = null;
 							try {
-								xsd = db3.get(uuid);
+								xsd = db3.get(uuidXSD);
 								xml = db.get(uuid);
 							} catch (Exception e) {
 								e("Error obteniendo pagina de DB");
 								e(e.getMessage());
 							}
-
 							try {
-								// saxParser
-								SchemaFactory schemaFactory = SchemaFactory
-										.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-								Schema schema;
-								schema = schemaFactory.newSchema(new StreamSource(new StringReader(xsd)));
+								// DOM parser
+								// Obtenemos la factoria de schemas
+								// SchemaFactory schemaFactory = SchemaFactory
+								// .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+								// Schema schema;
+								// // Encapsulamos el Schema
+								// schema = schemaFactory.newSchema(new
+								// StreamSource(new StringReader(xsd)));
+								// // Creamos instancia del DocumentBuilder
+								// DocumentBuilder dbuilder =
+								// DocumentBuilderFactory.newInstance().newDocumentBuilder();
+								// // Default Error Handler. Si da tiempo
+								// ampliar
+								// dbuilder.setErrorHandler(new
+								// DefaultErrorHandler());
+								// // Parseamos el xml a documento
+								// Document doc = dbuilder.parse(new
+								// InputSource(new StringReader(xml)));
+								// // Creamos validador en base al XSD
+								// Validator validator = schema.newValidator();
+								// // Validamos
+								// validator.validate(new DOMSource(doc));
 
-								SAXParserFactory saxFactory = SAXParserFactory.newInstance();
-								saxFactory.setSchema(schema);
-								SAXParser parser = saxFactory.newSAXParser();
-								parser.parse(new InputSource(new StringReader(xml)), new DefaultHandler());
+								final Source schemaSource = new StreamSource(new StringReader(xsd));
+								final Schema schema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+										.newSchema(schemaSource);
+								final SAXParserFactory factory = SAXParserFactory.newInstance();
+						        factory.setNamespaceAware(true);
+						        factory.setSchema(schema);
+						        final SAXParser parser = factory.newSAXParser();
+
+						        
+						        final MyContentHandler handler = new MyContentHandler();
+
+						        
+						        parser.parse(new InputSource(new StringReader(xml)), handler);
 
 							} catch (SAXException e) {
-								// TODO Auto-generated catch block
+								e("SAXException parse");
 								e.printStackTrace();
+								resp.setContent("Error 400 Bad Request");
+								resp.setStatus(HTTPResponseStatus.S400);
+								return resp;
 							} catch (ParserConfigurationException e) {
-								// TODO Auto-generated catch block
+								e("ParserConfigurationException parse");
 								e.printStackTrace();
 							} catch (IOException e) {
-								// TODO Auto-generated catch block
+								e("IOException parse");
 								e.printStackTrace();
 							}
+							// El parseo ha sido completado con exito
+							String XSLT = null;
+							String HTML = null;
+							try {
+								XSLT = db2.get(uuidXSLT);
+								TransformerFactory tFactory = TransformerFactory.newInstance();
+								Transformer transformer = tFactory
+										.newTransformer(new StreamSource(new StringReader(XSLT)));
+								StringWriter salida = new StringWriter();
 
-							resp.setContent(content);
-							resp.setContentType("application/xml");
+								transformer.transform(new StreamSource(new StringReader(xml)),
+										new StreamResult(salida));
+								StringBuffer sb = salida.getBuffer();
+								HTML = sb.toString();
+							} catch (Exception e) {
+								e("Excepcion en el transformador");
+								e.printStackTrace();
+							}
+							if (HTML != null) {
+								resp.setContent(HTML);
+								resp.setContentType("text/html");
+
+							} else {
+								resp.setContent(xml);
+								resp.setContentType("application/xml");
+							}
 							resp.setStatus(HTTPResponseStatus.S200);
 						} else {
 							// uuid no existe -> error 404
@@ -221,7 +276,7 @@ public class HTMLControllerDB {
 						resp.setContent("Error 404 - No existe esa pagina");
 						resp.setStatus(HTTPResponseStatus.S404);
 					}
-				} else {
+				} else { // Si va sin XSLT
 					try {
 						db = new DBDAO_XML(connection);
 					} catch (Exception e1) {
@@ -636,5 +691,45 @@ public class HTMLControllerDB {
 	public void e(String s) {
 		System.err.println(s);
 	}
+	
+	private static class MyContentHandler extends DefaultHandler {
+
+        private String element = "";
+
+        @Override
+        public void startElement(String uri, String localName, String qName,
+                Attributes attributes) throws SAXException {
+
+            if(localName != null && !localName.isEmpty())
+                element = localName;
+            else
+                element = qName;
+
+        }
+
+        @Override
+        public void warning(SAXParseException exception) throws SAXException {
+            System.out.println(element + ": " + exception.getMessage());
+            throw new SAXException();
+        }
+
+        @Override
+        public void error(SAXParseException exception) throws SAXException {
+            System.out.println(element + ": " + exception.getMessage());
+            throw new SAXException();
+        }
+
+        @Override
+        public void fatalError(SAXParseException exception) throws SAXException {
+            System.out.println(element + ": " + exception.getMessage());
+            throw new SAXException();
+        }
+
+        public String getElement() {
+            return element;
+        }
+
+    }
+	
 
 }
