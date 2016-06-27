@@ -19,11 +19,8 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 
-import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import com.mysql.jdbc.Connection;
 
@@ -187,41 +184,15 @@ public class HTMLControllerDB {
 								e(e.getMessage());
 							}
 							try {
-								// DOM parser
-								// Obtenemos la factoria de schemas
-								// SchemaFactory schemaFactory = SchemaFactory
-								// .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-								// Schema schema;
-								// // Encapsulamos el Schema
-								// schema = schemaFactory.newSchema(new
-								// StreamSource(new StringReader(xsd)));
-								// // Creamos instancia del DocumentBuilder
-								// DocumentBuilder dbuilder =
-								// DocumentBuilderFactory.newInstance().newDocumentBuilder();
-								// // Default Error Handler. Si da tiempo
-								// ampliar
-								// dbuilder.setErrorHandler(new
-								// DefaultErrorHandler());
-								// // Parseamos el xml a documento
-								// Document doc = dbuilder.parse(new
-								// InputSource(new StringReader(xml)));
-								// // Creamos validador en base al XSD
-								// Validator validator = schema.newValidator();
-								// // Validamos
-								// validator.validate(new DOMSource(doc));
-
-								final Source schemaSource = new StreamSource(new StringReader(xsd));
-								final Schema schema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+								// Parseo SAX
+								Source schemaSource = new StreamSource(new StringReader(xsd));
+								Schema schema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
 										.newSchema(schemaSource);
-								final SAXParserFactory factory = SAXParserFactory.newInstance();
+								SAXParserFactory factory = SAXParserFactory.newInstance();
 						        factory.setNamespaceAware(true);
 						        factory.setSchema(schema);
-						        final SAXParser parser = factory.newSAXParser();
-
-						        
-						        final MyContentHandler handler = new MyContentHandler();
-
-						        
+						        SAXParser parser = factory.newSAXParser();
+						        HandlerValidacion handler = new HandlerValidacion();
 						        parser.parse(new InputSource(new StringReader(xml)), handler);
 
 							} catch (SAXException e) {
@@ -241,6 +212,7 @@ public class HTMLControllerDB {
 							String XSLT = null;
 							String HTML = null;
 							try {
+								// Obtenemos XSLT y transformamos XML
 								XSLT = db2.get(uuidXSLT);
 								TransformerFactory tFactory = TransformerFactory.newInstance();
 								Transformer transformer = tFactory
@@ -467,9 +439,7 @@ public class HTMLControllerDB {
 					return resp;
 				}
 
-			} else if (request.getResourceParameters().get("xml") != null) { // POST
-																				// de
-																				// XML
+			} else if (request.getResourceParameters().get("xml") != null) {
 				DBDAO_XML db = null;
 				try {
 					db = new DBDAO_XML(connection);
@@ -692,44 +662,7 @@ public class HTMLControllerDB {
 		System.err.println(s);
 	}
 	
-	private static class MyContentHandler extends DefaultHandler {
-
-        private String element = "";
-
-        @Override
-        public void startElement(String uri, String localName, String qName,
-                Attributes attributes) throws SAXException {
-
-            if(localName != null && !localName.isEmpty())
-                element = localName;
-            else
-                element = qName;
-
-        }
-
-        @Override
-        public void warning(SAXParseException exception) throws SAXException {
-            System.out.println(element + ": " + exception.getMessage());
-            throw new SAXException();
-        }
-
-        @Override
-        public void error(SAXParseException exception) throws SAXException {
-            System.out.println(element + ": " + exception.getMessage());
-            throw new SAXException();
-        }
-
-        @Override
-        public void fatalError(SAXParseException exception) throws SAXException {
-            System.out.println(element + ": " + exception.getMessage());
-            throw new SAXException();
-        }
-
-        public String getElement() {
-            return element;
-        }
-
-    }
+	
 	
 
 }

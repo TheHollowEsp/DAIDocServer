@@ -4,7 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.esei.uvigo.es/dai/hybridserver configuration.xsd">
 	<connections>
-		<http>10001</http>
+		<http>80</http>
 		<webservice>http://localhost:20001/hs</webservice>
 		<numClients>50</numClients>
 	</connections>
@@ -12,7 +12,7 @@
 	<database>
 		<user>hsdb</user>
 		<password>hsdbpass</password>
-		<url>jdbc:mysql://localhost:3306/hstestdb1</url>
+		<url>jdbc:mysql://localhost:3306/hstestdb</url>
 	</database>
 	
 	<servers>

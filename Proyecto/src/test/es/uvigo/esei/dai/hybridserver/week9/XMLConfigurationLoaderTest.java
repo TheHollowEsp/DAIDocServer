@@ -48,7 +48,7 @@ public class XMLConfigurationLoaderTest {
 		
 		assertEquals("hsdb", configuration.getDbUser());
 		assertEquals("hsdbpass", configuration.getDbPassword());
-		assertEquals("jdbc:mysql:/localhost:3306/hsdb", configuration.getDbURL());
+		assertEquals("jdbc:mysql://localhost:3306/hsdb", configuration.getDbURL());
 		
 		assertEquals(3, configuration.getServers().size());
 		ServerConfiguration server = configuration.getServers().get(0);

@@ -20,20 +20,38 @@ package es.uvigo.esei.dai.hybridserver;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+
 import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+import es.uvigo.esei.dai.hybridserver.http.HandlerValidacion;
 
 public class XMLConfigurationLoader {
 
 	public Configuration load(File xmlFile) throws Exception {
 		Configuration conf = new Configuration();
-
+		
+		Source schemaSource = new StreamSource(new File("configuration.xsd"));
+		Schema schema = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
+				.newSchema(schemaSource);
+		Validator val = schema.newValidator();
+		val.setErrorHandler(new HandlerValidacion());
+		val.validate(new StreamSource(xmlFile));
+		
+		
 		DocumentBuilder db = DocumentBuilderFactory.newInstance()
 				.newDocumentBuilder();
-
+		
 		Document doc = db.parse(xmlFile);
 		doc.getDocumentElement().normalize();
 		
